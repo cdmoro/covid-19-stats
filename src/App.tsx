@@ -1,11 +1,13 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect } from 'react';
 import useFetch from './hooks/useFetch';
 import StatCard from './components/StatCard';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import { ReactComponent as Moon } from './assets/moon.svg'
 
 const App: FC = () => {
-  const [ worldData, wdLoading, wdError ] = useFetch('https://covid19.mathdro.id/api');
-  const [selectedCountry, setSelectedCountry ] = useLocalStorage('country-selected', 'AR');
+  const [theme, setTheme] = useLocalStorage('theme', 'dark')
+  const [worldData, wdLoading, wdError] = useFetch('https://covid19.mathdro.id/api');
+  const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', 'AR');
   const [countryData, cLoading, cError] = useFetch(
     `https://covid19.mathdro.id/api/countries/${selectedCountry}`
   )
@@ -13,9 +15,24 @@ const App: FC = () => {
     "https://covid19.mathdro.id/api/countries"
   )
 
+  useEffect(() => {
+    document.body.classList.add(theme)
+  }, [])
+
   const handleCountrySelection = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(e.currentTarget.value)
   }
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    document.body.classList.toggle('light')
+    document.body.classList.toggle('dark')
+  }
+
+  // useEffect(() => {
+
+  // }, [])
 
   return (
     <div className="App flex flex-col justify-center items-center min-h-screen">
@@ -25,6 +42,14 @@ const App: FC = () => {
           <span role="img" aria-label="Microbe icon">🦠</span>
           COVID-19
         </h1> */}
+        <button
+          className="toggle-theme-button neumorph neumorph-outset rounded-full h-10 w-10 text-center"
+          onClick={toggleTheme}
+        >
+          <Moon />
+          {/* {moon} */}
+          {/* <img src={moon} alt="Theme icon" /> */}
+        </button>
         <div className="neumorph neumorph-inset mb-6 p-6 h-64">
           { !countriesLoading && countries && (
             <select 

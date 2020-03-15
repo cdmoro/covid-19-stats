@@ -1,6 +1,7 @@
 {
   "name": "covid-live",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -21,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/styles/tailwind.css -o src/index.css",
-    "watch:css": "postcss src/styles/tailwind.css -o src/index.css -w"
+    "watch:css": "postcss src/styles/tailwind.css -o src/index.css -w",
+    "deploy": "./deploy.sh"
   },
   "eslintConfig": {
     "extends": "react-app"

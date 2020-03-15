@@ -33,4 +33,24 @@ body {
     @apply neumorph-outset
 }
 
+.light .StatCard:hover {
+    @apply neumorph-light-outset
+}
+
+body.light {
+    background-color: #EEE;
+}
+
+.light {
+    color: coral;
+}
+
+.neumorph-light-inset {
+	box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001;
+}
+
+.neumorph-light-outset {
+	box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+}
+
 @tailwind utilities;
