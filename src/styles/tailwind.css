@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+
+body {
+    background-color: #131419;
+    color: #FFF;
+}
+
+.neumorph {
+    transition: box-shadow 0.2s cubic-bezier(.79,.21,.06,.81);
+    border-radius: 10px;
+}
+
+.neumorph-outset {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
+                5px 5px 15px rgba(0, 0, 0, .5),
+                inset 0px 0px 0px rgba(255, 255, 255, .05), 
+                inset 0px 0px 0px rgba(0, 0, 0, .5);
+}
+
+.neumorph-inset {
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
+                0px 0px 0px rgba(0, 0, 0, .5),
+                inset -5px -5px 10px rgba(255, 255, 255, .05), 
+                inset 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.StatCard ~ .StatCard {
+    @apply ml-6
+}
+
+.StatCard:hover {
+    @apply neumorph-outset
+}
+
+@tailwind utilities;
