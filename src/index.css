@@ -609,6 +609,7 @@ video {
 body {
   background-color: #131419;
   color: #FFF;
+  font-family: 'Rubik', sans-serif;
 }
 
 .neumorph {
@@ -646,6 +647,39 @@ body {
                 5px 5px 15px rgba(0, 0, 0, .5),
                 inset 0px 0px 0px rgba(255, 255, 255, .05), 
                 inset 0px 0px 0px rgba(0, 0, 0, .5)
+}
+
+[data-theme=dark] .CountryStats {
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
+                0px 0px 0px rgba(0, 0, 0, .5),
+                inset -5px -5px 10px rgba(255, 255, 255, .05), 
+                inset 5px 5px 15px rgba(0, 0, 0, .5)
+}
+
+[data-theme=light] .CountryStats {
+  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
+}
+
+[data-theme=dark] button {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
+                5px 5px 15px rgba(0, 0, 0, .5),
+                inset 0px 0px 0px rgba(255, 255, 255, .05), 
+                inset 0px 0px 0px rgba(0, 0, 0, .5)
+}
+
+[data-theme=dark] button:active {
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
+                0px 0px 0px rgba(0, 0, 0, .5),
+                inset -5px -5px 10px rgba(255, 255, 255, .05), 
+                inset 5px 5px 15px rgba(0, 0, 0, .5)
+}
+
+[data-theme=light] button {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001
+}
+
+[data-theme=light] button:active {
+  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
 }
 
 [data-theme=light] .StatCard {

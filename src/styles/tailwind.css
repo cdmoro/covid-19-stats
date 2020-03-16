@@ -4,6 +4,7 @@
 body {
     background-color: #131419;
     color: #FFF;
+    font-family: 'Rubik', sans-serif;
 }
 
 .neumorph {
@@ -35,6 +36,30 @@ body {
 
 [data-theme=dark] .StatCard:hover {
     @apply neumorph-outset
+}
+
+[data-theme=dark] .CountryStats {
+    @apply neumorph-inset
+}
+
+[data-theme=light] .CountryStats {
+    @apply neumorph-light-inset
+}
+
+[data-theme=dark] button {
+    @apply neumorph-outset
+}
+
+[data-theme=dark] button:active {
+    @apply neumorph-inset
+}
+
+[data-theme=light] button {
+    @apply neumorph-light-outset
+}
+
+[data-theme=light] button:active {
+    @apply neumorph-light-inset
 }
 
 [data-theme=light] .StatCard {

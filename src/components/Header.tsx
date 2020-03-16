@@ -17,9 +17,9 @@ const Header: FC = () => {
 
     return (
         <div className="flex mb-2 items-center p-3">
-            <h1 className="flex-1">COVID-19 stats</h1>
+            <h1 className="text-2xl flex-1">COVID-19 stats</h1>
             <button
-                className="neumorph neumorph-outset rounded-full p-3 active:neumorph-inset outline-none"
+                className="neumorph rounded-full p-3 outline-none"
                 title="Change theme"
                 onClick={toggleTheme}
             >

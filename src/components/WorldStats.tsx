@@ -1,13 +1,17 @@
 import React, { FC } from 'react'
 import StatCard from './StatCard'
 import useFetch from '../hooks/useFetch';
+import Footer from './Footer';
 
 const WorldStats: FC = () => {
     const [worldData, wdLoading] = useFetch('https://covid19.mathdro.id/api');
     
     return (
         <>
-            <h2 className="my-3 text-2xl">World data</h2>
+            <h2 className="my-3 text-2xl flex justify-between items-baseline">
+                <span>World data</span>
+                <span className="text-xs text-gray-500 mr-2">{worldData?.lastUpdate}</span>
+            </h2>
 
             {
                 !wdLoading && worldData && (
@@ -31,9 +35,7 @@ const WorldStats: FC = () => {
             )
             }
 
-            <div className="mt-4 text-xs text-gray-500 text-center">
-                Last update: {worldData?.lastUpdate} | Made by Carlos Bonadeo
-            </div>
+            <Footer lastUpdate={worldData?.lastUpdate}/>
         </>
     )
 }
