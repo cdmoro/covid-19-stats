@@ -631,14 +631,25 @@ body {
 }
 
 .StatCard ~ .StatCard {
-  margin-left: 1.5rem
+  margin-left: 1.25rem
 }
 
-.StatCard:hover {
+.dark .StatCard {
+  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
+                0px 0px 0px rgba(0, 0, 0, .5),
+                inset -5px -5px 10px rgba(255, 255, 255, .05), 
+                inset 5px 5px 15px rgba(0, 0, 0, .5)
+}
+
+.dark .StatCard:hover {
   box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
                 5px 5px 15px rgba(0, 0, 0, .5),
                 inset 0px 0px 0px rgba(255, 255, 255, .05), 
                 inset 0px 0px 0px rgba(0, 0, 0, .5)
+}
+
+.light .StatCard {
+  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
 }
 
 .light .StatCard:hover {

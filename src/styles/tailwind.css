@@ -26,11 +26,19 @@ body {
 }
 
 .StatCard ~ .StatCard {
-    @apply ml-6
+    @apply ml-5
 }
 
-.StatCard:hover {
+.dark .StatCard {
+    @apply neumorph-inset
+}
+
+.dark .StatCard:hover {
     @apply neumorph-outset
+}
+
+.light .StatCard {
+    @apply neumorph-light-inset
 }
 
 .light .StatCard:hover {
