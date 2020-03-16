@@ -16,10 +16,10 @@ const CountryStats: FC = () => {
     }
 
     return (
-        <div className="neumorph neumorph-inset mb-6 p-6 h-64">
+        <div className="neumorph neumorph-inset mb-6 p-6">
             {!countriesLoading && countries && (
                 <select
-                    className="text-gray-900 w-full p-3 rounded-md mb-6"
+                    className="text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl"
                     onChange={handleCountrySelection}
                     value={selectedCountry}
                 >
