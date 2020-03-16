@@ -634,33 +634,33 @@ body {
   margin-left: 1.25rem
 }
 
-.dark .StatCard {
+[data-theme=dark] .StatCard {
   box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
                 0px 0px 0px rgba(0, 0, 0, .5),
                 inset -5px -5px 10px rgba(255, 255, 255, .05), 
                 inset 5px 5px 15px rgba(0, 0, 0, .5)
 }
 
-.dark .StatCard:hover {
+[data-theme=dark] .StatCard:hover {
   box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
                 5px 5px 15px rgba(0, 0, 0, .5),
                 inset 0px 0px 0px rgba(255, 255, 255, .05), 
                 inset 0px 0px 0px rgba(0, 0, 0, .5)
 }
 
-.light .StatCard {
+[data-theme=light] .StatCard {
   box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
 }
 
-.light .StatCard:hover {
+[data-theme=light] .StatCard:hover {
   box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001
 }
 
-body.light {
+body[data-theme=light] {
   background-color: #EEE;
 }
 
-.light {
+[data-theme=light] {
   color: coral;
 }
 

@@ -29,27 +29,27 @@ body {
     @apply ml-5
 }
 
-.dark .StatCard {
+[data-theme=dark] .StatCard {
     @apply neumorph-inset
 }
 
-.dark .StatCard:hover {
+[data-theme=dark] .StatCard:hover {
     @apply neumorph-outset
 }
 
-.light .StatCard {
+[data-theme=light] .StatCard {
     @apply neumorph-light-inset
 }
 
-.light .StatCard:hover {
+[data-theme=light] .StatCard:hover {
     @apply neumorph-light-outset
 }
 
-body.light {
+body[data-theme=light] {
     background-color: #EEE;
 }
 
-.light {
+[data-theme=light] {
     color: coral;
 }
 

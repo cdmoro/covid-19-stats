@@ -5,8 +5,8 @@ import Header from './components/Header';
 
 const App: FC = () => {
   return (
-    <div className="App flex flex-col md:justify-center items-center min-h-screen">
-      <div className="w-screen md:w-6/12">
+    <div className="App md:flex md:justify-center md:items-center min-h-screen p-4">
+      <div className="md:w-6/12">
         <Header/>
         <CountryStats />
         <WorldStats />
