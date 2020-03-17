@@ -10,7 +10,7 @@ const WorldStats: FC = () => {
         <>
             <h2 className="my-3 text-2xl flex justify-between items-baseline">
                 <span>World data</span>
-                <span className="text-xs text-gray-500 mr-2">{worldData?.lastUpdate}</span>
+                {/* <span className="text-xs text-gray-500 mr-2">{worldData?.lastUpdate}</span> */}
             </h2>
 
             {
