@@ -16,7 +16,7 @@ const CountryStats: FC = () => {
     }
 
     return (
-        <div className="CountryStats neumorph mb-6 p-6">
+        <div className="CountryStats neumorph neumorph-inset mb-6 p-6">
             <select
                 className="text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl"
                 onChange={handleCountrySelection}

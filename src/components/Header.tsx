@@ -10,18 +10,13 @@ const Header: FC = () => {
         document.documentElement.dataset.theme = theme
     }, [theme])
 
-    const toggleTheme = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.currentTarget.blur();
-        setTheme(themes[theme])
-    }
-
     return (
         <div className="flex mb-2 items-center p-3">
             <h1 className="text-2xl flex-1">COVID-19 stats</h1>
             <button
-                className="neumorph rounded-full p-3 outline-none"
+                className="neumorph neumorph-outset rounded-full p-3 focus:outline-none"
                 title="Change theme"
-                onClick={toggleTheme}
+                onClick={() => setTheme(themes[theme])}
             >
                 <Moon />
             </button>

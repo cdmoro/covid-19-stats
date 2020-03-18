@@ -58,12 +58,12 @@ body {
     @apply ml-5
 }
 
-.StatCard, .CountryStats, button:active {
-    box-shadow: var(--inset-shadow);
+button:active {
+    @apply neumorph-inset;
 }
 
-.StatCard:hover, button {
-    box-shadow: var(--outset-shadow);
+.StatCard:hover {
+    @apply neumorph-outset;
 }
 
 @tailwind utilities;

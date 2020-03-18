@@ -663,11 +663,11 @@ body {
   margin-left: 1.25rem
 }
 
-.StatCard, .CountryStats, button:active {
+button:active {
   box-shadow: var(--inset-shadow);
 }
 
-.StatCard:hover, button {
+.StatCard:hover {
   box-shadow: var(--outset-shadow);
 }
 
