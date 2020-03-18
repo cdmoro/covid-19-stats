@@ -24,3 +24,20 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - [ ] PWA with push motifications
 - [ ] World map
 - [ ] Add internationalization (i18n)
+
+## Credits
+
+- [COVID-19 API Rest](https://github.com/mathdroid/covid-19-api) for the stats.
+- [Neumorphism generator](https://neumorphism.io/).
+
+## License
+
+The MIT License (MIT).
+
+## Contact
+
+- [Github](https://github.com/cdmoro)
+- [Gitlab](https://gitlab.com/carlosbonadeo)
+- [Linkedin](https://www.linkedin.com/in/cdbonadeo/)
+- [Twitter](https://twitter.com/CarlosBonadeo)
+- [carlosbonadeo@gmail.com](mailto:carlosbonadeo@gmail.com)
