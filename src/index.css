@@ -606,9 +606,43 @@ video {
   }
 }
 
+:root, [data-theme="dark"] {
+  --bg-color: #1f2028;
+  --text-color: #EEE;
+  --inset-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
+                    0px 0px 0px rgba(0, 0, 0, .5),
+                    inset -5px -5px 10px rgba(255, 255, 255, .05), 
+                    inset 5px 5px 15px rgba(0, 0, 0, .5);
+  --outset-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
+                    5px 5px 15px rgba(0, 0, 0, .5),
+                    inset 0px 0px 0px rgba(255, 255, 255, .05), 
+                    inset 0px 0px 0px rgba(0, 0, 0, .5);
+}
+
+[data-theme="light"] {
+  --bg-color: #EEE;
+  --text-color: #1f2028;
+  --inset-shadow: 0px 0px 0px 0px #fff9, 
+                    0px 0px 0px 0px #fff9, 
+                    0px 0px 0px 0px #0001, 
+                    0px 0px 0px 0px #0001, 
+                    inset -7px -7px 20px 0px #fff9, 
+                    inset -4px -4px 5px 0px #fff9, 
+                    inset 7px 7px 20px 0px #0003, 
+                    inset 4px 4px 5px 0px #0001;
+  --outset-shadow: -7px -7px 20px 0px #fff9, 
+                    -4px -4px 5px 0px #fff9, 
+                    7px 7px 20px 0px #0002, 
+                    4px 4px 5px 0px #0001, 
+                    inset 0px 0px 0px 0px #fff9, 
+                    inset 0px 0px 0px 0px #0001, 
+                    inset 0px 0px 0px 0px #fff9, 
+                    inset 0px 0px 0px 0px #0001;
+}
+
 body {
-  background-color: #131419;
-  color: #FFF;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Rubik', sans-serif;
 }
 
@@ -618,92 +652,23 @@ body {
 }
 
 .neumorph-outset {
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
-                5px 5px 15px rgba(0, 0, 0, .5),
-                inset 0px 0px 0px rgba(255, 255, 255, .05), 
-                inset 0px 0px 0px rgba(0, 0, 0, .5);
+  box-shadow: var(--outset-shadow)
 }
 
 .neumorph-inset {
-  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
-                0px 0px 0px rgba(0, 0, 0, .5),
-                inset -5px -5px 10px rgba(255, 255, 255, .05), 
-                inset 5px 5px 15px rgba(0, 0, 0, .5);
+  box-shadow: var(--inset-shadow)
 }
 
 .StatCard ~ .StatCard {
   margin-left: 1.25rem
 }
 
-[data-theme=dark] .StatCard {
-  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
-                0px 0px 0px rgba(0, 0, 0, .5),
-                inset -5px -5px 10px rgba(255, 255, 255, .05), 
-                inset 5px 5px 15px rgba(0, 0, 0, .5)
+.StatCard, .CountryStats, button:active {
+  box-shadow: var(--inset-shadow);
 }
 
-[data-theme=dark] .StatCard:hover {
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
-                5px 5px 15px rgba(0, 0, 0, .5),
-                inset 0px 0px 0px rgba(255, 255, 255, .05), 
-                inset 0px 0px 0px rgba(0, 0, 0, .5)
-}
-
-[data-theme=dark] .CountryStats {
-  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
-                0px 0px 0px rgba(0, 0, 0, .5),
-                inset -5px -5px 10px rgba(255, 255, 255, .05), 
-                inset 5px 5px 15px rgba(0, 0, 0, .5)
-}
-
-[data-theme=light] .CountryStats {
-  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
-}
-
-[data-theme=dark] button {
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
-                5px 5px 15px rgba(0, 0, 0, .5),
-                inset 0px 0px 0px rgba(255, 255, 255, .05), 
-                inset 0px 0px 0px rgba(0, 0, 0, .5)
-}
-
-[data-theme=dark] button:active {
-  box-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
-                0px 0px 0px rgba(0, 0, 0, .5),
-                inset -5px -5px 10px rgba(255, 255, 255, .05), 
-                inset 5px 5px 15px rgba(0, 0, 0, .5)
-}
-
-[data-theme=light] button {
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001
-}
-
-[data-theme=light] button:active {
-  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
-}
-
-[data-theme=light] .StatCard {
-  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001
-}
-
-[data-theme=light] .StatCard:hover {
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001
-}
-
-body[data-theme=light] {
-  background-color: #EEE;
-}
-
-[data-theme=light] {
-  color: coral;
-}
-
-.neumorph-light-inset {
-  box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001, 0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9, inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001;
-}
-
-.neumorph-light-outset {
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+.StatCard:hover, button {
+  box-shadow: var(--outset-shadow);
 }
 
 .sr-only {

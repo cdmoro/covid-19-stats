@@ -7,7 +7,7 @@ const Header: FC = () => {
     const themes: Record<string, any> = { dark: 'light', light: 'dark'}
 
     useEffect(() => {
-        document.body.dataset.theme = theme
+        document.documentElement.dataset.theme = theme
     }, [theme])
 
     const toggleTheme = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

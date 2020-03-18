@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import WorldStats from './components/WorldStats';
 import CountryStats from './components/CountryStats';
 import Header from './components/Header';
-// import Footer from './components/Footer';
+import GithubCorner from './components/GithubCorner';
+import Footer from './components/Footer';
 
 const App: FC = () => {
   return (
@@ -11,8 +12,9 @@ const App: FC = () => {
         <Header/>
         <CountryStats />
         <WorldStats />
-        {/* <Footer lastUpdate="dsdf" /> */}
+        <Footer />
       </div>
+      <GithubCorner />
     </div>
   )
 }
