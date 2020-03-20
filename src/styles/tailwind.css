@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 
-:root, [data-theme="dark"] {
+:root, [data-theme='dark'] {
     --bg-color: #1f2028;
     --text-color: #EEE;
+    --accent-color: theme('colors.pink.600');
+    --muted-color: theme('colors.gray.600');
     --inset-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
                     0px 0px 0px rgba(0, 0, 0, .5),
                     inset -5px -5px 10px rgba(255, 255, 255, .05), 
@@ -14,9 +16,11 @@
                     inset 0px 0px 0px rgba(0, 0, 0, .5);
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
     --bg-color: #EEE;
     --text-color: #1f2028;
+    --accent-color: theme('colors.orange.600');
+    --muted-color: theme('colors.gray.700');
     --inset-shadow: 0px 0px 0px 0px #fff9, 
                     0px 0px 0px 0px #fff9, 
                     0px 0px 0px 0px #0001, 
@@ -46,24 +50,8 @@ body {
     border-radius: 10px;
 }
 
-.neumorph-outset {
-    box-shadow: var(--outset-shadow)
-}
-
-.neumorph-inset {
-    box-shadow: var(--inset-shadow)
-}
-
 .StatCard ~ .StatCard {
     @apply ml-5
-}
-
-button:active {
-    @apply neumorph-inset;
-}
-
-.StatCard:hover {
-    @apply neumorph-outset;
 }
 
 @tailwind utilities;

@@ -397,6 +397,8 @@ svg {
 :root {
   --bg-color: #1f2028;
   --text-color: #EEE;
+  --accent-color: #d53f8c;
+  --muted-color: #718096;
   --inset-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
                     0px 0px 0px rgba(0, 0, 0, .5),
                     inset -5px -5px 10px rgba(255, 255, 255, .05), 
@@ -419,24 +421,8 @@ body {
   border-radius: 10px;
 }
 
-.neumorph-outset {
-  box-shadow: var(--outset-shadow)
-}
-
-.neumorph-inset {
-  box-shadow: var(--inset-shadow)
-}
-
 .StatCard ~ .StatCard {
   margin-left: 1.25rem
-}
-
-button:active {
-  box-shadow: var(--inset-shadow);
-}
-
-.StatCard:hover {
-  box-shadow: var(--outset-shadow);
 }
 
 .rounded-md {
@@ -560,6 +546,22 @@ button:active {
   right: 0;
 }
 
+.shadow-neumorph-inset {
+  box-shadow: var(--inset-shadow);
+}
+
+.shadow-neumorph-outset {
+  box-shadow: var(--outset-shadow);
+}
+
+.hover\:shadow-neumorph-outset:hover {
+  box-shadow: var(--outset-shadow);
+}
+
+.active\:shadow:active {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
 .text-center {
   text-align: center;
 }
@@ -568,16 +570,20 @@ button:active {
   color: #a0aec0;
 }
 
-.text-gray-600 {
-  color: #718096;
-}
-
 .text-gray-900 {
   color: #1a202c;
 }
 
 .text-pink-600 {
   color: #d53f8c;
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.text-muted {
+  color: var(--muted-color);
 }
 
 .text-xs {

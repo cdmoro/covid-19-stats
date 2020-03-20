@@ -32,7 +32,7 @@ const WorldStats: FC = () => {
                 )
             }
 
-            <div className="mt-3 text-xs text-gray-600 text-center">
+            <div className="mt-3 text-xs text-muted text-center">
                 Last updated: {data?.lastUpdate}
             </div>
         </>
