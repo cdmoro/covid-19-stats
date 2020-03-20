@@ -394,7 +394,7 @@ svg {
  * https://github.com/mozdevs/cssremedy/issues/14
  */
 
-:root {
+:root, [data-theme='dark'] {
   --bg-color: #1f2028;
   --text-color: #EEE;
   --accent-color: #d53f8c;
@@ -407,6 +407,29 @@ svg {
                     5px 5px 15px rgba(0, 0, 0, .5),
                     inset 0px 0px 0px rgba(255, 255, 255, .05), 
                     inset 0px 0px 0px rgba(0, 0, 0, .5);
+}
+
+[data-theme='light'] {
+  --bg-color: #EEE;
+  --text-color: #1f2028;
+  --accent-color: #dd6b20;
+  --muted-color: #4a5568;
+  --inset-shadow: 0px 0px 0px 0px #fff9, 
+                    0px 0px 0px 0px #fff9, 
+                    0px 0px 0px 0px #0001, 
+                    0px 0px 0px 0px #0001, 
+                    inset -7px -7px 20px 0px #fff9, 
+                    inset -4px -4px 5px 0px #fff9, 
+                    inset 7px 7px 20px 0px #0003, 
+                    inset 4px 4px 5px 0px #0001;
+  --outset-shadow: -7px -7px 20px 0px #fff9, 
+                    -4px -4px 5px 0px #fff9, 
+                    7px 7px 20px 0px #0002, 
+                    4px 4px 5px 0px #0001, 
+                    inset 0px 0px 0px 0px #fff9, 
+                    inset 0px 0px 0px 0px #0001, 
+                    inset 0px 0px 0px 0px #fff9, 
+                    inset 0px 0px 0px 0px #0001;
 }
 
 body {
