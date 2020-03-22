@@ -39,6 +39,10 @@
                     inset 0px 0px 0px 0px #0001;
 }
 
+[data-theme='dark'] .header button div {
+    transform: translateX(-54px);
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);

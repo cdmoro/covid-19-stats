@@ -432,6 +432,11 @@ svg {
                     inset 0px 0px 0px 0px #0001;
 }
 
+[data-theme='dark'] .header button div {
+  -webkit-transform: translateX(-54px);
+          transform: translateX(-54px);
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -485,6 +490,11 @@ body {
           justify-content: center;
 }
 
+.justify-between {
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
 .flex-1 {
   -webkit-box-flex: 1;
           flex: 1 1 0%;
@@ -496,6 +506,10 @@ body {
 
 .font-bold {
   font-weight: 700;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .my-3 {
@@ -534,6 +548,10 @@ body {
 
 .focus\:outline-none:focus {
   outline: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .p-2 {
@@ -579,6 +597,10 @@ body {
 
 .hover\:shadow-neumorph-outset:hover {
   box-shadow: var(--outset-shadow);
+}
+
+.focus\:shadow-outline:focus {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 .active\:shadow:active {
@@ -633,13 +655,44 @@ body {
   text-decoration: underline;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.transform {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  -webkit-transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+          transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+}
+
+.-translate-x-px {
+  --transform-translate-x: -1px;
 }
 
 .transition-colors {
   -webkit-transition-property: background-color, border-color, color, fill, stroke;
   transition-property: background-color, border-color, color, fill, stroke;
+}
+
+.transition-transform {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 
 .ease-in-out {

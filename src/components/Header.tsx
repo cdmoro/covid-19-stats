@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from 'react'
-import { ReactComponent as Moon } from '../assets/moon.svg'
 import { useLocalStorage } from '../hooks/useLocalStorage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const Header: FC = () => {
     const [theme, setTheme] = useLocalStorage('theme', 'dark')
@@ -11,16 +12,19 @@ const Header: FC = () => {
     }, [theme])
 
     return (
-        <div className="flex mb-2 items-center p-3">
-            <h1 className="text-2xl flex-1">COVID-19 stats</h1>
-            <button
-                className="neumorph shadow-neumorph-outset rounded-full p-3 focus:outline-none active:shadow"
-                title="Change theme"
-                onClick={() => setTheme(themes[theme])}
-            >
-                <Moon />
-            </button>
-        </div>
+      <div className="header flex mb-2 items-center p-3">
+        <h1 className="text-2xl flex-1">COVID-19 stats</h1>
+        <button
+          className="neumorph shadow-neumorph-outset rounded-full p-3 focus:outline-none focus:shadow-outline active:shadow overflow-hidden w-12 h-12"
+          title="Change theme"
+          onClick={() => setTheme(themes[theme])}
+        >
+            <div className="flex w-20 justify-between transform transition-transform duration-200 text-accent -translate-x-px">
+                <FontAwesomeIcon size="lg" fixedWidth icon={faSun} />
+                <FontAwesomeIcon size="lg" fixedWidth icon={faMoon} />
+            </div>
+        </button>
+      </div>
     )
 }
 
