@@ -6,7 +6,7 @@ import WorldMap from './WorldMap';
 
 const CountryStats: FC = () => {
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', { 'country': 'Argentina', 'code': 'AR'});
-    const [countryData, , cError] = useFetch(
+    const [countryData, countryLoading, cError] = useFetch(
         `https://covid19.mathdro.id/api/countries/${selectedCountry.code}`
     )
     const [countries] = useFetch(
@@ -29,14 +29,15 @@ const CountryStats: FC = () => {
           selectedCountry={selectedCountry.code}
           setSelectedCountry={(code: string) =>
             setSelectedCountry({
-                country: getCountryName(code),
-                code
+              country: getCountryName(code),
+              code
             })
           }
         />
 
         <select
-          className="text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl"
+          className="text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl bg-primary text-back"
+          disabled={countryLoading}
           onChange={handleCountrySelection}
           value={JSON.stringify(selectedCountry)}
         >
@@ -68,13 +69,16 @@ const CountryStats: FC = () => {
             <>
               <StatCard
                 title="Confirmed"
-                value={countryData?.confirmed.value}
+                value={countryLoading ? undefined : countryData?.confirmed.value}
               />
               <StatCard
                 title="Recovered"
-                value={countryData?.recovered.value}
+                value={countryLoading ? undefined : countryData?.recovered.value}
               />
-              <StatCard title="Deaths" value={countryData?.deaths.value} />
+              <StatCard
+                title="Deaths"
+                value={countryLoading ? undefined : countryData?.deaths.value}
+              />
             </>
           )}
         </div>
