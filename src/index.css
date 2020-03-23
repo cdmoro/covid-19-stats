@@ -432,7 +432,7 @@ svg {
                     inset 0px 0px 0px 0px #0001;
 }
 
-[data-theme='dark'] .header button div {
+[data-theme='light'] .header button div {
   -webkit-transform: translateX(-54px);
           transform: translateX(-54px);
 }

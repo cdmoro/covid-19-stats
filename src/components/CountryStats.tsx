@@ -24,10 +24,13 @@ const CountryStats: FC = () => {
             >
                 {countries && Object.keys(countries.countries).map(countryName => {
                     return (
-                        <option value={JSON.stringify({
-                            "country": countryName,
-                            "code": countries.countries[countryName]
-                        })}>
+                        <option 
+                            key={countryName}
+                            value={JSON.stringify({
+                                "country": countryName,
+                                "code": countries.countries[countryName]
+                            })}
+                        >
                             {countryName} ({countries.countries[countryName]})
                         </option>
                     )

@@ -9,6 +9,7 @@ const Header: FC = () => {
 
     useEffect(() => {
         document.documentElement.dataset.theme = theme
+        document.body.classList.remove('hidden')
     }, [theme])
 
     return (
@@ -20,8 +21,8 @@ const Header: FC = () => {
           onClick={() => setTheme(themes[theme])}
         >
             <div className="flex w-20 justify-between transform transition-transform duration-200 text-accent -translate-x-px">
-                <FontAwesomeIcon size="lg" fixedWidth icon={faSun} />
                 <FontAwesomeIcon size="lg" fixedWidth icon={faMoon} />
+                <FontAwesomeIcon size="lg" fixedWidth icon={faSun} />
             </div>
         </button>
       </div>
