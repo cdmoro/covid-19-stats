@@ -5,12 +5,12 @@ import StatCard from './StatCard';
 import WorldMap from './WorldMap';
 
 const CountryStats: FC = () => {
-    const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', '{ "country": "Argentina", "code": "AR"}');
+    const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', { 'country': 'Argentina', 'code': 'AR'});
     const [countryData, , cError] = useFetch(
         `https://covid19.mathdro.id/api/countries/${selectedCountry.code}`
     )
     const [countries] = useFetch(
-        "https://covid19.mathdro.id/api/countries"
+        'https://covid19.mathdro.id/api/countries'
     )
     const handleCountrySelection = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedCountry(JSON.parse(e.currentTarget.value))
@@ -71,10 +71,10 @@ const CountryStats: FC = () => {
                 value={countryData?.confirmed.value}
               />
               <StatCard
-                title="recovered"
+                title="Recovered"
                 value={countryData?.recovered.value}
               />
-              <StatCard title="deaths" value={countryData?.deaths.value} />
+              <StatCard title="Deaths" value={countryData?.deaths.value} />
             </>
           )}
         </div>
