@@ -7,7 +7,7 @@
     --accent-color: theme('colors.pink.600');
     --muted-color: theme('colors.gray.600');
     --inset-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
-                    0px 0px 0px rgba(0, 0, 0, .5),
+    0px 0px 0px rgba(0, 0, 0, .5),
                     inset -5px -5px 10px rgba(255, 255, 255, .05), 
                     inset 5px 5px 15px rgba(0, 0, 0, .5);
     --outset-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 

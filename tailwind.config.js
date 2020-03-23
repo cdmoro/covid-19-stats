@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         'accent': 'var(--accent-color)',
         'muted': 'var(--muted-color)'
+      },
+      fill: {
+        'accent': 'var(--accent-color)'
       }
     }
   },

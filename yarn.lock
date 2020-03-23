@@ -10790,6 +10790,11 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
+world-map-country-shapes@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/world-map-country-shapes/-/world-map-country-shapes-1.0.0.tgz#d8027885d50dac6b2a76963f60bb1ae20c5639e8"
+  integrity sha512-cw6AoVbJCsAfMsZ+/GMnkyrTTRO+Jg2LbvNA1GdTCjXXD6ULitZinGrcCTv11Z2LNgWaVvF6XU0GWKIF2tJlyA==
+
 wrap-ansi@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-2.1.0.tgz#d8fc3d284dd05794fe84973caecdd1cf824fdd85"

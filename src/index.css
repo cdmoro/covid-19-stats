@@ -400,7 +400,7 @@ svg {
   --accent-color: #d53f8c;
   --muted-color: #718096;
   --inset-shadow: 0px 0px 0px rgba(255, 255, 255, .05), 
-                    0px 0px 0px rgba(0, 0, 0, .5),
+    0px 0px 0px rgba(0, 0, 0, .5),
                     inset -5px -5px 10px rgba(255, 255, 255, .05), 
                     inset 5px 5px 15px rgba(0, 0, 0, .5);
   --outset-shadow: -5px -5px 10px rgba(255, 255, 255, .05), 
@@ -607,6 +607,14 @@ body {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
+.fill-accent {
+  fill: var(--accent-color);
+}
+
 .text-center {
   text-align: center;
 }
@@ -752,7 +760,7 @@ body {
     font-size: 1.875rem;
   }
 
-  .md\:w-6\/12 {
-    width: 50%;
+  .md\:w-7\/12 {
+    width: 58.333333%;
   }
 }
