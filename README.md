@@ -2,7 +2,7 @@
 
 Get the latest COVID-19 stadistics by country. This is a result of messin' around with a public [covid-19 API Rest](https://github.com/mathdroid/covid-19-api). However, this project is in early stages, there are more features in the future!
 
-![App screenshot](https://i.imgur.com/yLQDn9v.png)
+![App screenshot](https://i.imgur.com/OJt9qq8.png)
 
 ## Made with
 
@@ -21,8 +21,8 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 
 - [x] Dark/light mode
 - [x] Type safety (typescript)
+- [x] World map
 - [ ] PWA with push motifications
-- [ ] World map
 - [ ] Add internationalization (i18n)
 
 ## Credits
