@@ -663,8 +663,12 @@ body {
   text-transform: uppercase;
 }
 
-.hover\:underline:hover {
+.underline {
   text-decoration: underline;
+}
+
+.hover\:no-underline:hover {
+  text-decoration: none;
 }
 
 .break-normal {
