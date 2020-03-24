@@ -24,7 +24,7 @@ const CountryStats: FC = () => {
     }
 
     return (
-      <div className="CountryStats neumorph shadow-neumorph-inset mb-6 p-6">
+      <div className="CountryStats neumorph sm:shadow-neumorph-inset mb-6 sm:p-6 p-0">
         <WorldMap
           selectedCountry={selectedCountry.code}
           setSelectedCountry={(code: string) =>
@@ -73,10 +73,12 @@ const CountryStats: FC = () => {
               />
               <StatCard
                 title="Recovered"
+                className="ml-2 sm:ml-5"
                 value={countryLoading ? undefined : countryData?.recovered.value}
               />
               <StatCard
                 title="Deaths"
+                className="ml-2 sm:ml-5"
                 value={countryLoading ? undefined : countryData?.deaths.value}
               />
             </>

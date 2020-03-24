@@ -22,10 +22,12 @@ const WorldStats: FC = () => {
                         />
                         <StatCard
                             title={`Recovered (${toPercentage(data.recovered.value)})`}
+                            className="ml-2 sm:ml-5"
                             value={data?.recovered.value}
                         />
                         <StatCard
                             title={`Deaths (${toPercentage(data.deaths.value)})`}
+                            className="ml-2 sm:ml-5"
                             value={data.deaths.value}
                         />
                     </div>

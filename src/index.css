@@ -449,9 +449,9 @@ body {
   border-radius: 10px;
 }
 
-.StatCard ~ .StatCard {
-  margin-left: 1.25rem
-}
+/* .StatCard ~ .StatCard {
+    @apply ml-5
+} */
 
 .bg-primary {
   background-color: var(--text-color);
@@ -534,6 +534,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -558,6 +562,10 @@ body {
   overflow: hidden;
 }
 
+.p-0 {
+  padding: 0;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -568,10 +576,6 @@ body {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-1 {
@@ -651,10 +655,6 @@ body {
   font-size: 0.75rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
 }
@@ -669,6 +669,11 @@ body {
 
 .hover\:underline:hover {
   text-decoration: underline;
+}
+
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .w-12 {
@@ -719,6 +724,29 @@ body {
 .duration-200 {
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
+}
+
+@media (min-width: 640px) {
+
+  .sm\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .sm\:shadow-neumorph-inset {
+    box-shadow: var(--inset-shadow);
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
