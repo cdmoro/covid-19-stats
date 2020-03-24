@@ -4,6 +4,12 @@ import useFetch from '../hooks/useFetch';
 import StatCard from './StatCard';
 import WorldMap from './WorldMap';
 
+interface Country {
+  name: string,
+  iso2: string,
+  iso3: string
+}
+
 const CountryStats: FC = () => {
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', { 'country': 'Argentina', 'code': 'AR'});
     const [countryData, countryLoading, cError] = useFetch(
@@ -17,23 +23,27 @@ const CountryStats: FC = () => {
     }
 
     const getCountryName = (code: string) => {
-        let name = Object.entries(countries.countries).filter(
-          country => country[1] === code
-        )
-        return name[0][0]
+        for(let country of countries.countries) {
+          if(country.iso2 === code) {
+            return country.name
+          }
+        }
     }
-
     return (
       <div className="CountryStats neumorph sm:shadow-neumorph-inset mb-6 sm:p-6 p-0">
         <WorldMap
           selectedCountry={selectedCountry.code}
-          setSelectedCountry={(code: string) =>
-            setSelectedCountry({
-              country: getCountryName(code),
-              code
-            })
+          setSelectedCountry={(code: string) => {
+              if(cError.length === 0) {
+                setSelectedCountry({
+                  country: getCountryName(code),
+                  code
+                })
+              }
+            }
           }
         />
+
 
         <select
           className="text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl bg-primary text-back"
@@ -42,16 +52,16 @@ const CountryStats: FC = () => {
           value={JSON.stringify(selectedCountry)}
         >
           {countries &&
-            Object.keys(countries.countries).map(countryName => {
+            (Object as any).values(countries.countries).map((country: Country) => {
               return (
                 <option
-                  key={countryName}
+                  key={country.name}
                   value={JSON.stringify({
-                    country: countryName,
-                    code: countries.countries[countryName]
+                    country: country.name,
+                    code: country.iso2
                   })}
                 >
-                  {countryName} ({countries.countries[countryName]})
+                  {country.name} ({country.iso2})
                 </option>
               )
             })}

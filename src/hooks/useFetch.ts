@@ -17,6 +17,7 @@ const useFetch = <T = any>(url: string) => {
                 else
                     setData(data)
             } catch (error) {
+                    setError('Bad request')
             } finally {
                 setLoading(false)
             }

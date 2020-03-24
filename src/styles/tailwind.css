@@ -54,8 +54,4 @@ body {
     border-radius: 10px;
 }
 
-/* .StatCard ~ .StatCard {
-    @apply ml-5
-} */
-
 @tailwind utilities;

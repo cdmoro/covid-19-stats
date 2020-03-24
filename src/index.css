@@ -449,10 +449,6 @@ body {
   border-radius: 10px;
 }
 
-/* .StatCard ~ .StatCard {
-    @apply ml-5
-} */
-
 .bg-primary {
   background-color: var(--text-color);
 }

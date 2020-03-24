@@ -6,7 +6,8 @@ const WorldStats: FC = () => {
     const [data, loading] = useFetch('https://covid19.mathdro.id/api');
 
     const toPercentage = (value: number): string => {
-        return `${((value / data.confirmed.value) * 100).toFixed(2)}%`;
+        const percentage: number = (value / data.confirmed.value) * 100 || 0
+        return `${percentage.toFixed(2)}%`;
     }
     
     return (
