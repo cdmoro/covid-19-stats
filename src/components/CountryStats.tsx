@@ -34,12 +34,10 @@ const CountryStats: FC = () => {
         <WorldMap
           selectedCountry={selectedCountry.code}
           setSelectedCountry={(code: string) => {
-              if(cError.length === 0) {
-                setSelectedCountry({
-                  country: getCountryName(code),
-                  code
-                })
-              }
+              setSelectedCountry({
+                country: getCountryName(code),
+                code
+              })
             }
           }
         />
