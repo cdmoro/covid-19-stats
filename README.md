@@ -2,7 +2,7 @@
 
 Get the latest COVID-19 stadistics by country. This is a result of messin' around with a public [covid-19 API Rest](https://github.com/mathdroid/covid-19-api). However, this project is in early stages, there are more features in the future!
 
-![App screenshot](https://i.imgur.com/OJt9qq8.png)
+![App screenshot](https://i.imgur.com/ycxR7rk.png)
 
 ## Made with
 
@@ -40,4 +40,4 @@ The MIT License (MIT).
 - [Gitlab](https://gitlab.com/carlosbonadeo)
 - [Linkedin](https://www.linkedin.com/in/cdbonadeo/)
 - [Twitter](https://twitter.com/CarlosBonadeo)
-- [carlosbonadeo@gmail.com](mailto:carlosbonadeo@gmail.com)
+- [Email](mailto:carlosbonadeo@gmail.com)
