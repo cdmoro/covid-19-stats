@@ -26,6 +26,12 @@ const CountryStats: FC = () => {
 
         return {}
     }
+
+    const toPercentage = (value: number): string => {
+      const percentage: number = (value / countryData?.confirmed.value) * 100 || 0
+      return `${percentage.toFixed(2)}%`;
+    }
+
     return (
       <div className="CountryStats neumorph sm:shadow-neumorph-inset mb-6 sm:p-6 p-0">
         <WorldMap
@@ -67,15 +73,15 @@ const CountryStats: FC = () => {
           {cError.length === 0 && (
             <>
               <StatCard
-                title="Confirmed"
+                title="Confirmed (100%)"
                 value={countryLoading ? undefined : countryData?.confirmed.value}
               />
               <StatCard
-                title="Recovered"
+                title={`Recovered (${toPercentage(countryData?.recovered.value)})`}
                 value={countryLoading ? undefined : countryData?.recovered.value}
               />
               <StatCard
-                title="Deaths"
+                title={`Deaths (${toPercentage(countryData?.deaths.value)})`}
                 value={countryLoading ? undefined : countryData?.deaths.value}
               />
             </>
