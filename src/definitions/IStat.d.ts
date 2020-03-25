@@ -8,7 +8,7 @@ export interface IStat {
     source?: string;
     countries?: string;
     countryDetail?: CountryDetail;
-    lastUpdate?: Date;
+    lastUpdate?: string;
 }
 
 export interface Confirmed {

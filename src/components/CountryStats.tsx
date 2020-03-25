@@ -3,17 +3,12 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import useFetch from '../hooks/useFetch';
 import StatCard from './StatCard';
 import WorldMap from './WorldMap';
-
-interface Country {
-  name: string,
-  iso2: string,
-  iso3: string
-}
+import Country from '../definitions/ICountry';
 
 const CountryStats: FC = () => {
-    const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', { 'country': 'Argentina', 'code': 'AR'});
+    const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', {});
     const [countryData, countryLoading, cError] = useFetch(
-        `https://covid19.mathdro.id/api/countries/${selectedCountry.code}`
+        `https://covid19.mathdro.id/api/countries/${selectedCountry.name}`
     )
     const [countries] = useFetch(
         'https://covid19.mathdro.id/api/countries'
@@ -22,22 +17,21 @@ const CountryStats: FC = () => {
         setSelectedCountry(JSON.parse(e.currentTarget.value))
     }
 
-    const getCountryName = (code: string) => {
+    const getCountryByIso2 = (iso2: string) => {
         for(let country of countries.countries) {
-          if(country.iso2 === code) {
-            return country.name
+          if(country.iso2 === iso2) {
+            return country
           }
         }
+
+        return {}
     }
     return (
       <div className="CountryStats neumorph sm:shadow-neumorph-inset mb-6 sm:p-6 p-0">
         <WorldMap
-          selectedCountry={selectedCountry.code}
-          setSelectedCountry={(code: string) => {
-              setSelectedCountry({
-                country: getCountryName(code),
-                code
-              })
+          selectedCountry={selectedCountry.iso2}
+          setSelectedCountry={(iso2: string) => {
+              setSelectedCountry(getCountryByIso2(iso2))
             }
           }
         />
@@ -49,24 +43,21 @@ const CountryStats: FC = () => {
           onChange={handleCountrySelection}
           value={JSON.stringify(selectedCountry)}
         >
-          {countries &&
-            (Object as any).values(countries.countries).map((country: Country) => {
+          <option value="{}"></option>
+          { countries &&
+            countries.countries.map((country: Country) => {
               return (
                 <option
                   key={country.name}
-                  value={JSON.stringify({
-                    country: country.name,
-                    code: country.iso2
-                  })}
+                  value={JSON.stringify(country)}
                 >
-                  {country.name} ({country.iso2})
+                  {country.name}
                 </option>
               )
             })}
         </select>
 
-        <div className="flex justify-center">
-          {/* <h2>{selectedCountry}</h2> */}
+        <div className="flex justify-center sx-2 sm:sx-5">
           {cError.length > 0 && (
             <div className="text-center text-gray-500 ">
               <div className="font-sans text-5xl mb-3">¯\_(ツ)_/¯</div>
@@ -81,12 +72,10 @@ const CountryStats: FC = () => {
               />
               <StatCard
                 title="Recovered"
-                className="ml-2 sm:ml-5"
                 value={countryLoading ? undefined : countryData?.recovered.value}
               />
               <StatCard
                 title="Deaths"
-                className="ml-2 sm:ml-5"
                 value={countryLoading ? undefined : countryData?.deaths.value}
               />
             </>

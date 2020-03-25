@@ -1,3 +1,6 @@
+const plugin = require('tailwindcss/plugin')
+const spacing = require('./src/spacing')
+
 module.exports = {
   theme: {
     extend: {
@@ -19,5 +22,7 @@ module.exports = {
   variants: {
     boxShadow: ['responsive', 'hover', 'focus', 'active'],
   },
-  plugins: [],
+  plugins: [
+    plugin(spacing)
+  ],
 }
