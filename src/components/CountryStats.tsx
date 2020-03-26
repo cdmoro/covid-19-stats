@@ -3,10 +3,10 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import useFetch from '../hooks/useFetch';
 import StatCard from './StatCard';
 import WorldMap from './WorldMap';
-import Country from '../definitions/ICountry';
+import ICountry from '../definitions/ICountry';
 
 const CountryStats: FC = () => {
-    const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', {});
+    const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', { name: 'Argentina', iso2: 'AR', iso3: 'ARG' } as ICountry);
     const [countryData, countryLoading, cError] = useFetch(
         `https://covid19.mathdro.id/api/countries/${selectedCountry.name}`
     )
@@ -24,7 +24,7 @@ const CountryStats: FC = () => {
           }
         }
 
-        return {}
+        throw new Error('Country not found')
     }
 
     const toPercentage = (value: number): string => {
@@ -35,23 +35,28 @@ const CountryStats: FC = () => {
     return (
       <div className="CountryStats neumorph sm:shadow-neumorph-inset mb-6 sm:p-6 p-0">
         <WorldMap
+          countries={countries}
           selectedCountry={selectedCountry.iso2}
           setSelectedCountry={(iso2: string) => {
-              setSelectedCountry(getCountryByIso2(iso2))
+              try {
+                setSelectedCountry(getCountryByIso2(iso2))
+              } catch(e) {
+
+              }
             }
           }
         />
 
 
         <select
-          className="text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl bg-primary text-back"
+          className="block text-gray-900 w-full p-2 md:p-3 rounded-md mb-6 md:text-xl bg-primary text-back focus:outline-none focus:outline-shadow"
           disabled={countryLoading}
           onChange={handleCountrySelection}
           value={JSON.stringify(selectedCountry)}
         >
           <option value="{}"></option>
           { countries &&
-            countries.countries.map((country: Country) => {
+            countries.countries.map((country: ICountry) => {
               return (
                 <option
                   key={country.name}

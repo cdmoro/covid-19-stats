@@ -16,7 +16,7 @@ const Header: FC = () => {
       <div className="header flex mb-2 items-center p-3">
         <h1 className="text-2xl flex-1">COVID-19 stats</h1>
         <button
-          className="neumorph shadow-neumorph-outset rounded-full p-3 focus:outline-none focus:shadow-outline active:shadow overflow-hidden w-12 h-12"
+          className="neumorph shadow-neumorph-outset rounded-full p-3 focus:outline-none focus:shadow-lg active:shadow overflow-hidden w-12 h-12"
           title="Change theme"
           onClick={() => setTheme(themes[theme])}
         >

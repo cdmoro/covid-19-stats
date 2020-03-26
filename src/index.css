@@ -451,6 +451,14 @@ body {
   border-radius: 9999px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -536,6 +544,10 @@ body {
   min-height: 100vh;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .focus\:outline-none:focus {
   outline: 0;
 }
@@ -589,8 +601,8 @@ body {
   box-shadow: var(--outset-shadow);
 }
 
-.focus\:shadow-outline:focus {
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+.focus\:shadow-lg:focus {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .active\:shadow:active {
@@ -603,6 +615,10 @@ body {
 
 .fill-accent {
   fill: var(--accent-color);
+}
+
+.stroke-gray-400 {
+  stroke: #cbd5e0;
 }
 
 .text-center {

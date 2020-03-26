@@ -16,8 +16,9 @@ module.exports = {
       },
       fill: {
         'accent': 'var(--accent-color)'
-      }
-    }
+      },
+    },
+    stroke: theme => theme('colors')
   },
   variants: {
     boxShadow: ['responsive', 'hover', 'focus', 'active'],
