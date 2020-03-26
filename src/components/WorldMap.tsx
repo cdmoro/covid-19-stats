@@ -52,7 +52,7 @@ const WorldMap: FC<Props> = ({ countries = { countries: [] }, selectedCountry, s
               d={country.shape} 
               className="fill-current opacity-75 stroke-gray-400"
             >
-              <title>{countryName}</title>
+              <title>{countryName} (no data)</title>
             </path>
           }
         })
