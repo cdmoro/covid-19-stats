@@ -2,14 +2,12 @@ import React, { FC } from 'react'
 import { formatDistanceToNow, format } from 'date-fns';
 import StatCard from './StatCard'
 import useFetch from '../hooks/useFetch';
+import { BASE_URL } from '../api';
+import { toPercentage } from '../utils/toPercentage';
+import { IStat } from '../definitions/IStat';
 
 const WorldStats: FC = () => {
-    const [data, loading] = useFetch('https://covid19.mathdro.id/api');
-
-    const toPercentage = (value: number): string => {
-        const percentage: number = (value / data.confirmed.value) * 100 || 0
-        return `${percentage.toFixed(2)}%`;
-    }
+    const [data, loading] = useFetch<IStat>(BASE_URL);
     
     return (
       <>
@@ -17,14 +15,14 @@ const WorldStats: FC = () => {
 
         {!loading && (
           <div className="flex sx-2 sm:sx-5">
-            <StatCard title="Confirmed (100%)" value={data.confirmed.value} />
+            <StatCard title="Confirmed (100%)" value={data?.confirmed?.value} />
             <StatCard
-              title={`Recovered (${toPercentage(data.recovered.value)})`}
-              value={data?.recovered.value}
+              title={`Recovered (${toPercentage(data?.recovered?.value, data?.confirmed?.value)})`}
+              value={data?.recovered?.value}
             />
             <StatCard
-              title={`Deaths (${toPercentage(data.deaths.value)})`}
-              value={data.deaths.value}
+              title={`Deaths (${toPercentage(data?.deaths?.value, data?.confirmed?.value)})`}
+              value={data?.deaths?.value}
             />
           </div>
         )}

@@ -1,22 +1,28 @@
-export interface IStat {
-    confirmed?: Confirmed;
-    recovered?: Confirmed;
-    deaths?: Confirmed;
+interface IStat {
+    confirmed?: IConfirmed;
+    recovered?: IConfirmed;
+    deaths?: IConfirmed;
     dailySummary?: string;
-    dailyTimeSeries?: CountryDetail;
+    dailyTimeSeries?: ICountryDetail;
     image?: string;
     source?: string;
     countries?: string;
-    countryDetail?: CountryDetail;
+    countryDetail?: ICountryDetail;
     lastUpdate?: string;
 }
 
-export interface Confirmed {
+interface IConfirmed {
     value: number;
     detail: string;
 }
 
-export interface CountryDetail {
+interface ICountryDetail {
     pattern: string;
     example: string;
+}
+
+export {
+    IStat,
+    IConfirmed,
+    ICountryDetail
 }
