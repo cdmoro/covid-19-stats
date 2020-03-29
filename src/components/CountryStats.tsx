@@ -8,7 +8,7 @@ import { toPercentage } from '../utils/toPercentage';
 import { COUNTRIES_URL, COUNTRY_DATA_URL } from '../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserFriends, faMap } from '@fortawesome/free-solid-svg-icons'
-import Continents from '../utils/continents.json'
+import continents from '../utils/continents.json'
 
 const COUNTRY_DEFAULT: ICountry = {
   name: 'Argentina',
@@ -41,17 +41,20 @@ const CountryStats: FC = () => {
     const [countries] = useFetch<ICountries>(COUNTRIES_URL)
 
     const countriesByContinents = useMemo(() => {
-      return Object.keys(Continents).map(continent =>
+      return Object.keys(continents).map((continent: string) =>
         <optgroup label={continent} key={continent}>
           {
-            // @ts-ignore
-            countries?.countries.filter(country => Continents[continent].includes(country.iso2)).map((country: ICountry) => {
-              return (
-                <option key={country.name} value={JSON.stringify(country)}>
-                  {country.name}
-                </option>
-              )
-            })
+            countries?.countries
+              // @ts-ignore
+              .filter(country => continents[continent].includes(country.iso2))
+              .map((country: ICountry) => {
+                return (
+                  <option key={country.name} value={JSON.stringify(country)}>
+                    {country.name}
+                  </option>
+                )
+              }
+            )
           }
         </optgroup>
       )
