@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-// @ts-ignore
 import country from "world-map-country-shapes";
 
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
     setSelectedCountry: Function
 }
 
-const WorldMap: FC<Props> = ({ countries = { countries: [] }, selectedCountry, setSelectedCountry = () => {} }) => {
+const WorldMap: FC<Props> = ({ countries, selectedCountry, setSelectedCountry }) => {
   const hasData = (id: string): Boolean => {
     for (let country of countries.countries) {
       if (country.iso2 === id)
@@ -28,6 +27,7 @@ const WorldMap: FC<Props> = ({ countries = { countries: [] }, selectedCountry, s
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      id="world-map"
       width="100%"
       viewBox="0 0 2000 1001"
     >
@@ -40,7 +40,7 @@ const WorldMap: FC<Props> = ({ countries = { countries: [] }, selectedCountry, s
               key={country.id}
               d={country.shape}
               className={
-                `cursor-pointer transition-colors duration-200 ease-in-out stroke-gray-400 ${selectedCountry === country.id ? 'fill-accent' : 'fill-current'}`
+                `cursor-pointer transition-colors duration-200 ease-in-out stroke-gray-500 ${selectedCountry === country.id ? 'fill-accent' : 'fill-current'}`
               }
               onClick={() => setSelectedCountry(country.id)}
             >
@@ -50,7 +50,7 @@ const WorldMap: FC<Props> = ({ countries = { countries: [] }, selectedCountry, s
             return <path
               key={country.id} 
               d={country.shape} 
-              className="fill-current opacity-75 stroke-gray-400"
+              className="fill-current opacity-75 stroke-gray-500"
             >
               <title>{countryName} (no data)</title>
             </path>
@@ -59,6 +59,11 @@ const WorldMap: FC<Props> = ({ countries = { countries: [] }, selectedCountry, s
       }
     </svg>
   )
+}
+
+WorldMap.defaultProps = {
+  countries: { countries: [] },
+  setSelectedCountry: () => {}
 }
 
 export default WorldMap
