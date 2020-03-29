@@ -13,7 +13,7 @@ const Header: FC = () => {
     }, [theme])
 
     return (
-      <div className="header flex mb-2 items-center p-3">
+      <div className="header flex items-center p-3">
         <h1 className="text-2xl flex-1">COVID-19 stats</h1>
         <button
           className="neumorph shadow-neumorph-outset rounded-full p-3 focus:outline-none focus:shadow-lg active:shadow overflow-hidden w-12 h-12"
