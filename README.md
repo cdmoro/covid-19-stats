@@ -31,6 +31,7 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 ## Credits
 
 - [COVID-19 API Rest](https://github.com/mathdroid/covid-19-api) for the stats.
+- [Rest countries API](http://restcountries.eu/)
 - [Neumorphism generator](https://neumorphism.io/).
 
 ## License
