@@ -3,8 +3,9 @@ import country from "world-map-country-shapes"
 import svgPanZoom from "svg-pan-zoom"
 import useEvent from "../hooks/useEvent"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExpand } from "@fortawesome/free-solid-svg-icons"
+import { faExpand, faLock, faUnlock } from "@fortawesome/free-solid-svg-icons"
 import * as Hammer from "hammerjs"
+import { useLocalStorage } from "../hooks/useLocalStorage"
 
 interface Props {
   countries: Record<string, any>
@@ -19,6 +20,7 @@ const WorldMap: FC<Props> = ({
 }) => {
   const worldMap = useRef<SVGSVGElement>(null)
   const panZoomWorldMap = useRef<SvgPanZoom.Instance>()
+  const [automaticZoom, setAutomaticZoom] = useLocalStorage('automatic-zoom', true)
 
   useEvent("resize", () => {
     panZoomWorldMap?.current?.resize()
@@ -152,8 +154,11 @@ const WorldMap: FC<Props> = ({
   }, [])
 
   useEffect(() => {
-    zoomToCountry(selectedCountry)
-  }, [zoomToCountry, selectedCountry])
+    if (automaticZoom) {
+      zoomToCountry(selectedCountry)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedCountry])
 
   const countryPaths = useMemo(() => {
     const getCountryName = (id: string) => {
@@ -206,7 +211,6 @@ const WorldMap: FC<Props> = ({
       <svg
         xmlns="http://www.w3.org/2000/svg"
         ref={worldMap}
-        // className="absolute inset-0 h-full"
         id="world-map"
         width="100%"
         height="100%"
@@ -228,6 +232,13 @@ const WorldMap: FC<Props> = ({
           onClick={() => panZoomWorldMap?.current?.reset()}
         >
           <FontAwesomeIcon fixedWidth icon={faExpand} />
+        </button>
+        <button
+          className="btn-map"
+          title="Automatic/manual zoom"
+          onClick={() => setAutomaticZoom(!automaticZoom)}
+        >
+          <FontAwesomeIcon fixedWidth icon={automaticZoom ? faLock : faUnlock} />
         </button>
         <button
           className="btn-map text-lg"
