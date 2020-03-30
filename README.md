@@ -2,7 +2,7 @@
 
 Get the latest COVID-19 stadistics by country. This is a result of messin' around with a public [covid-19 API Rest](https://github.com/mathdroid/covid-19-api). However, this project is in early stages, there are more features in the future!
 
-![App screenshot](https://i.imgur.com/aLo8zgV.png)
+![App screenshot](https://i.imgur.com/M3E5xgx.png)
 
 ## Made with
 
@@ -10,6 +10,8 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - React hooks
 - Typescript
 - Tailwind CSS
+- [SVG Pan Zoom](https://github.com/ariutta/svg-pan-zoom)
+- Hammerjs
 
 ## Features
 
@@ -22,12 +24,14 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - [x] Dark/light mode
 - [x] Type safety (typescript)
 - [x] World map
+- [x] Zoomable map
 - [ ] PWA with push motifications
-- [ ] Add internationalization (i18n)
+- [ ] Internationalization (i18n)
 
 ## Credits
 
 - [COVID-19 API Rest](https://github.com/mathdroid/covid-19-api) for the stats.
+- [Rest countries API](http://restcountries.eu/)
 - [Neumorphism generator](https://neumorphism.io/).
 
 ## License
