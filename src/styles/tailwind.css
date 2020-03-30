@@ -64,7 +64,7 @@ body {
 
 .bg-map {
     background: transparent;
-    background-size: 25%, 100%;
+    background-size: 35%, 100%;
     -webkit-animation: waves 90s ease infinite;
     -moz-animation: waves 90s ease infinite;
     animation: waves 90s ease infinite;
