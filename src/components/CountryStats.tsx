@@ -94,7 +94,9 @@ const CountryStats: FC = () => {
 
     return (
       <>
-        <div className="relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-120">
+        <div className="bg-map relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-120" style={{
+          backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
+        }}>
           <WorldMap
             countries={countries as ICountries}
             selectedCountry={selectedCountry.iso2}

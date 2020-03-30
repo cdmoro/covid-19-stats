@@ -62,4 +62,29 @@ body {
     @apply outline-none shadow-outline
 }
 
+.bg-map {
+    background: transparent;
+    background-size: 25%, 100%;
+    -webkit-animation: waves 90s ease infinite;
+    -moz-animation: waves 90s ease infinite;
+    animation: waves 90s ease infinite;
+}
+
+
+@-webkit-keyframes waves {
+    0%{background-position:0% 50%, 0}
+    50%{background-position:100% 50%, 0}
+    100%{background-position:0% 50%, 0}
+}
+@-moz-keyframes waves {
+    0%{background-position:0% 50%, 0}
+    50%{background-position:100% 50%, 0}
+    100%{background-position:0% 50%, 0}
+}
+@keyframes waves {
+    0%{background-position:0% 50%, 0}
+    50%{background-position:100% 50%, 0}
+    100%{background-position:0% 50%, 0}
+}
+
 @tailwind utilities;
