@@ -54,4 +54,12 @@ body {
     border-radius: 10px;
 }
 
+.btn-map {
+    @apply rounded-full shadow w-8 h-8 bg-accent text-primary font-bold
+}
+
+.btn-map:focus {
+    @apply outline-none shadow-outline
+}
+
 @tailwind utilities;

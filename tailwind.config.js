@@ -4,6 +4,10 @@ const spacing = require('./src/spacing')
 module.exports = {
   theme: {
     extend: {
+      height: {
+        '92': '23rem',
+        '120': '30rem'
+      },
       boxShadow: {
         'neumorph-inset': 'var(--inset-shadow)',
         'neumorph-outset': 'var(--outset-shadow)'
