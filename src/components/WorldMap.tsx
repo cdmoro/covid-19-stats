@@ -146,12 +146,19 @@ const WorldMap: FC<Props> = ({
       // @ts-ignore
       var tBBox = document.querySelector(`#${id}`)?.getBBox()
       var tPoint = {
-        x: (tBBox.x + tBBox.width / 2) * tMatrix.a + tMatrix.e,
-        y: (tBBox.y + tBBox.height / 2) * tMatrix.d + tMatrix.f
+        x: 0,
+        y: 0
       }
 
-      //REM: Approximate values, I leave the exact calculation up to you.
-      panZoomWorldMap?.current?.zoomAtPoint(6, tPoint)
+      if (tBBox) {
+        tPoint = {
+          x: (tBBox.x + tBBox.width / 2) * tMatrix.a + tMatrix.e,
+          y: (tBBox.y + tBBox.height / 2) * tMatrix.d + tMatrix.f
+        }
+
+        //REM: Approximate values, I leave the exact calculation up to you.
+        panZoomWorldMap?.current?.zoomAtPoint(6, tPoint)
+      }
     }, 500)
   }, [])
 

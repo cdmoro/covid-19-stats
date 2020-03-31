@@ -34,7 +34,7 @@ const WorldStats: FC = () => {
           {data?.lastUpdate && (
             <>
               <span>{format(new Date(data?.lastUpdate), "MM/dd/yyyy @ hh:mma")} </span>
-              {/* <span>({formatDistanceToNow(new Date(data?.lastUpdate))})</span> */}
+              <span>({formatDistanceToNow(new Date(data?.lastUpdate))})</span>
             </>
           )}
         </div>
