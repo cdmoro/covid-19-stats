@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useRef, useMemo, useCallback } from "react"
+import { useTranslation } from "react-i18next"
 import country from "world-map-country-shapes"
 import svgPanZoom from "svg-pan-zoom"
 import useEvent from "../hooks/useEvent"
@@ -18,6 +19,7 @@ const WorldMap: FC<Props> = ({
   selectedCountry,
   setSelectedCountry
 }) => {
+  const { t } = useTranslation()
   const worldMap = useRef<SVGSVGElement>(null)
   const panZoomWorldMap = useRef<SvgPanZoom.Instance>()
   const [automaticZoom, setAutomaticZoom] = useLocalStorage('automatic-zoom', true)
@@ -228,28 +230,28 @@ const WorldMap: FC<Props> = ({
       <div className="absolute bottom-0 right-0 flex flex-col p-3 lg:p-4 sy-2">
         <button
           className="btn-map"
-          title="Reset position"
+          title={t('reset-position')}
           onClick={() => panZoomWorldMap?.current?.reset()}
         >
           <FontAwesomeIcon fixedWidth icon={faExpand} />
         </button>
         <button
           className="btn-map"
-          title="Automatic/manual zoom"
+          title={t('automatic-manual-zoom')}
           onClick={() => setAutomaticZoom(!automaticZoom)}
         >
           <FontAwesomeIcon fixedWidth icon={automaticZoom ? faLock : faUnlock} />
         </button>
         <button
           className="btn-map text-lg"
-          title="Zoom in"
+          title={t('zoom-in')}
           onClick={() => panZoomWorldMap?.current?.zoomIn()}
         >
           +
         </button>
         <button
           className="btn-map text-lg"
-          title="Zoom out"
+          title={t('zoom-out')}
           onClick={() => panZoomWorldMap?.current?.zoomOut()}
         >
           -

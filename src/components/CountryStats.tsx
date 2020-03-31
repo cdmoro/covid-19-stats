@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect, useMemo } from 'react'
+import { useTranslation } from "react-i18next"
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import useFetch from '../hooks/useFetch';
 import StatCard from './StatCard';
@@ -31,6 +32,7 @@ interface ICountryData {
 type ICountryRest = Record<ICountry['iso2'], ICountryData>
 
 const CountryStats: FC = () => {
+    const { t } = useTranslation()
     const [selectedCountry, setSelectedCountry] = useLocalStorage('country-selected', COUNTRY_DEFAULT);
     const [countriesData, setCountriesData] = useState<ICountryRest>({})
     
@@ -169,13 +171,13 @@ const CountryStats: FC = () => {
           {cError.length === 0 && (
             <>
               <StatCard
-                title="Confirmed (100%)"
+                title={`${t('confirmed')} (100%)`}
                 value={
                   countryLoading ? undefined : countryData?.confirmed.value
                 }
               />
               <StatCard
-                title={`Recovered (${toPercentage(
+                title={`${t('recovered')} (${toPercentage(
                   countryData?.recovered.value,
                   countryData?.confirmed.value
                 )})`}
@@ -184,7 +186,7 @@ const CountryStats: FC = () => {
                 }
               />
               <StatCard
-                title={`Deaths (${toPercentage(
+                title={`${t('deaths')} (${toPercentage(
                   countryData?.deaths.value,
                   countryData?.confirmed.value
                 )})`}
