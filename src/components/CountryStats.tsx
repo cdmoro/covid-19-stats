@@ -40,15 +40,16 @@ const CountryStats: FC = () => {
         `${COUNTRIES_URL}/${selectedCountry.name}`
     )
     
-    const [countries] = useFetch<ICountries>(COUNTRIES_URL)
+    const [countries] = useFetch<ICountry[]>(COUNTRIES_URL, (data: ICountries) => {
+      return data.countries
+    })
 
     const countriesByContinents = useMemo(() => {
       return Object.keys(continents).map((continent: string) =>
         <optgroup label={continent} key={continent}>
           {
-            countries?.countries
-              // @ts-ignore
-              .filter(country => continents[continent].includes(country.iso2))
+            // @ts-ignore
+            countries?.filter(country => continents[continent].includes(country.iso2))
               .map((country: ICountry) => {
                 return (
                   <option key={country.name} value={JSON.stringify(country)}>
@@ -67,7 +68,7 @@ const CountryStats: FC = () => {
     }
 
     const getCountryByIso2 = (iso2: string) => {
-        for(let country of countries?.countries as ICountry[]) {
+        for(let country of countries!) {
           if(country.iso2 === iso2) {
             return country
           }
@@ -100,7 +101,7 @@ const CountryStats: FC = () => {
           backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
         }}>
           <WorldMap
-            countries={countries as ICountries}
+            countries={countries!}
             selectedCountry={selectedCountry.iso2}
             setSelectedCountry={(iso2: string) => {
               try {

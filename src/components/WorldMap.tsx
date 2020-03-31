@@ -7,9 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExpand, faLock, faUnlock } from "@fortawesome/free-solid-svg-icons"
 import * as Hammer from "hammerjs"
 import { useLocalStorage } from "../hooks/useLocalStorage"
+import { ICountry } from "../definitions/ICountry"
 
 interface Props {
-  countries: Record<string, any>
+  countries: ICountry[]
   selectedCountry: string
   setSelectedCountry: Function
 }
@@ -171,14 +172,14 @@ const WorldMap: FC<Props> = ({
 
   const countryPaths = useMemo(() => {
     const getCountryName = (id: string) => {
-      for (let country of countries.countries) {
+      for (let country of countries) {
         if (country.iso2 === id) return country.name
       }
       return id
     }
 
     const hasData = (id: string): Boolean => {
-      for (let country of countries.countries) {
+      for (let country of countries) {
         if (country.iso2 === id) return true
       }
       return false
@@ -269,7 +270,7 @@ const WorldMap: FC<Props> = ({
 }
 
 WorldMap.defaultProps = {
-  countries: { countries: [] },
+  countries: [],
   setSelectedCountry: () => {}
 }
 

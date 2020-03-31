@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const useFetch = <T = undefined | any>(url: string): [T | undefined, boolean, string] => {
+const useFetch = <T = undefined | any>(url: string, callback: Function = (data: any) => data): [T | undefined, boolean, string] => {
     const [data, setData] = useState<T>()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(true)
@@ -16,7 +16,7 @@ const useFetch = <T = undefined | any>(url: string): [T | undefined, boolean, st
                 if (data.error)
                     setError(data.error.message)
                 else
-                    setData(data)
+                    setData(callback(data))
             } catch (error) {
                 setError('Bad request')
             } finally {
@@ -25,6 +25,7 @@ const useFetch = <T = undefined | any>(url: string): [T | undefined, boolean, st
         }
 
         fetchData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [url])
     
     return [
