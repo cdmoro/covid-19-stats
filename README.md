@@ -18,6 +18,14 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - Neumorphism style
 - Dark/light mode
 - Open Graph meta tags
+- Multiple translations:
+    - Chinese
+    - English
+    - Spanish
+    - French
+    - Greek
+    - Italian
+    - Portuguese
 
 ## Todos
 
@@ -27,9 +35,9 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - [x] Animated background map
 - [x] Zoomable map
 - [x] Automatic/manual zoom mode
+- [x] Internationalization (i18n)
 - [ ] PWA with push motifications
 - [ ] Geolocalization
-- [ ] Internationalization (i18n)
 
 ## Credits
 
