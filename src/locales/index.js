@@ -1,6 +1,17 @@
 export default {
   en: {
     name: 'English',
+    variations: {
+        en: 'English',
+        es: 'Inglés',
+        pt: 'Inglês',
+        it: 'Inglese',
+        fr: 'Anglais',
+        ch: '英语',
+        gr: 'Αγγλικά',
+        ru: 'английский',
+        vn: 'Tiếng Anh'
+    },
     translation: {
       title: 'COVID-19 stats',
       confirmed: 'Confirmed',
@@ -19,6 +30,17 @@ export default {
   },
   es: {
     name: 'Spanish',
+    variations: {
+        en: 'Spanish',
+        es: 'Español',
+        pt: 'Espanhol',
+        it: 'Spagnolo',
+        fr: 'Espagnol',
+        ch: '西班牙文',
+        gr: 'Ισπανικά',
+        ru: 'испанский',
+        vn: 'Tây Ban Nha'
+    },
     translation: {
       title: 'Estadísticas del COVID-19',
       confirmed: 'Confirmados',
@@ -37,6 +59,17 @@ export default {
   },
   pt: {
     name: 'Portuguese',
+    variations: {
+        en: 'Portuguese',
+        es: 'Portugués',
+        pt: 'Português',
+        it: 'Portoghese',
+        fr: 'Rousse',
+        ch: '红发女郎',
+        gr: 'Πορτογαλικά',
+        ru: 'Πортугальский',
+        vn: 'Bồ Đào Nha'
+    },
     translation: {
       title: 'Estatísticas do COVID-19',
       confirmed: 'Confirmado',
@@ -55,6 +88,17 @@ export default {
   },
   it: {
     name: 'Italian',
+    variations: {
+        en: 'Italian',
+        es: 'Italiano',
+        pt: 'Italiano',
+        it: 'Italiano',
+        fr: 'Italien',
+        ch: '义大利文',
+        gr: 'Iταλικός',
+        ru: 'итальянский',
+        vn: 'người Ý'
+    },
     translation: {
       title: 'Statistiche COVID-19',
       confirmed: 'Confermato',
@@ -73,6 +117,17 @@ export default {
   },
   fr: {
     name: 'French',
+    variations: {
+        en: 'French',
+        es: 'Francés',
+        pt: 'Francês',
+        it: 'Francese',
+        fr: 'Français',
+        ch: '法文',
+        gr: 'γαλλική γλώσσα',
+        ru: 'Французский',
+        vn: 'người Pháp'
+    },
     translation: {
       title: 'Statistiques COVID-19',
       confirmed: 'Confirmé',
@@ -91,6 +146,17 @@ export default {
   },
   ch: {
     name: 'Chinese',
+    variations: {
+        en: 'Chinese',
+        es: 'Chino',
+        pt: 'Chinês',
+        it: 'Cinese',
+        fr: 'Chinois',
+        ch: '中文',
+        gr: 'Kινέζικα',
+        ru: 'Китайский',
+        vn: 'người Trung Quốc'
+    },
     translation: {
       title: 'COVID-19统计',
       confirmed: '已确认',
@@ -109,6 +175,17 @@ export default {
   },
   gr: {
     name: 'Greek',
+    variations: {
+        en: 'Greek',
+        es: 'Griego',
+        pt: 'Grego',
+        it: 'Greco',
+        fr: 'Grec',
+        ch: '希腊语',
+        gr: 'Ελληνικά',
+        ru: 'греческий',
+        vn: 'người Hy Lạp'
+    },
     translation: {
       title: 'COVID-19 στατιστικά στοιχεία',
       confirmed: 'Επιβεβαιωμένος',
@@ -127,6 +204,17 @@ export default {
   },
   ru: {
     name: 'Russian',
+    variations: {
+        en: 'Russian',
+        es: 'Ruso',
+        pt: 'Russo',
+        it: 'Russo',
+        fr: 'Russe',
+        ch: '俄语',
+        gr: 'Ρωσική',
+        ru: 'русский',
+        vn: 'tiếng Nga'
+    },
     translation: {
       title: 'COVID-19 статистика',
       confirmed: 'Подтвержденные случаи',
@@ -145,6 +233,17 @@ export default {
   },
   vn: {
     name: 'Vietnamese',
+    variations: {
+        en: 'Vietnamese',
+        es: 'Vietnamita',
+        pt: 'Vietnamita',
+        it: 'Vietnamita',
+        fr: 'Vietnamien',
+        ch: '越南文',
+        gr: 'Βιετναμέζοι',
+        ru: 'вьетнамский',
+        vn: 'Tiếng Việt'
+    },
     translation: {
       title: 'COVID-19 số liệu thống kê',
       confirmed: 'Xác nhận',
