@@ -13,7 +13,7 @@ const WorldStats: FC = () => {
     
     return (
       <>
-        <h2 className="my-3 text-2xl">{`${t('world-data')}`}</h2>
+        <h2 className="my-3 text-2xl">{t('world-data')}</h2>
 
         {!loading && (
           <div className="flex sx-2 sm:sx-5">
