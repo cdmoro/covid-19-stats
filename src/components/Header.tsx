@@ -34,10 +34,7 @@ const Header: FC = () => {
             {
               Object.keys(locales).sort().map((key: string) => (
                 <option key={key} value={key}>
-                  {
-                    // @ts-ignore
-                    locales[key as keyof typeof locales].variations[i18n.language]
-                  }
+                  {locales[key as keyof typeof locales].name}
                 </option>
               ))
             }
