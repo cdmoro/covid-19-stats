@@ -513,6 +513,44 @@ body {
   }
 }
 
+.virus-icon {
+  -webkit-animation: virus 1s cubic-bezier(0.980, 0.000, 0.090, 2);
+          animation: virus 1s cubic-bezier(0.980, 0.000, 0.090, 2);
+}
+
+.virus-icon:hover {
+  -webkit-transform: scale(1.25) rotate(360deg);
+          transform: scale(1.25) rotate(360deg)
+}
+
+@-webkit-keyframes virus {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(180deg);
+            transform: scale(0) rotate(180deg)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg)
+  }
+}
+
+@keyframes virus {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(180deg);
+            transform: scale(0) rotate(180deg)
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg)
+  }
+}
+
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -603,6 +641,10 @@ body {
   height: 1rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -641,8 +683,8 @@ body {
   margin-top: 0.5rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mt-3 {
@@ -687,6 +729,10 @@ body {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-3 {
@@ -838,12 +884,12 @@ body {
   font-size: 0.75rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
 }
 
 .text-2xl {
@@ -882,6 +928,10 @@ body {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-12 {
@@ -958,8 +1008,24 @@ body {
 
 @media (min-width: 640px) {
 
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
+  }
+
   .sm\:h-64 {
     height: 16rem;
+  }
+
+  .sm\:p-3 {
+    padding: 0.75rem;
+  }
+
+  .sm\:pl-10 {
+    padding-left: 2.5rem;
   }
 
   .sm\:shadow-neumorph-inset {
@@ -972,6 +1038,14 @@ body {
 
   .sm\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
   }
 
   .sm\:sx-5 > * + * {
@@ -1024,14 +1098,6 @@ body {
 
   .md\:mr-4 {
     margin-right: 1rem;
-  }
-
-  .md\:mr-5 {
-    margin-right: 1.25rem;
-  }
-
-  .md\:pl-10 {
-    padding-left: 2.5rem;
   }
 
   .md\:text-sm {

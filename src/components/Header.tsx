@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { useTranslation } from "react-i18next"
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSun, faGlobeAmericas, faVirus } from '@fortawesome/free-solid-svg-icons'
 import locales from '../locales'
 
 const Header: FC = () => {
@@ -20,11 +20,14 @@ const Header: FC = () => {
     }
 
     return (
-      <div className="header flex items-center p-3 mb-2">
-        <h1 className="text-2xl flex-1">{t("title")}</h1>
-        <div className="inline-block relative cursor-pointer mr-3 md:mr-5 text-accent">
+      <div className="header flex items-center p-3 mb-1">
+        <h1 className="text-xl sm:text-2xl flex-1">
+          <FontAwesomeIcon className="virus-icon transition-all duration-200 ease-in-out text-accent mr-2" size="lg" fixedWidth icon={faVirus} />
+          {t("title")}
+        </h1>
+        <div className="inline-block relative text-accent">
           <select
-            className="neumorph shadow-neumorph-outset text-sm md:text-base focus:outline-none appearance-none bg-transparent h-12 pr-3 pl-3 md:pl-10 rounded-full"
+            className="cursor-pointer text-xs sm:text-sm font-bold uppercase focus:outline-none appearance-none bg-transparent h-10 sm:h-12 pr-3 pl-3 sm:pl-10"
             onChange={handleLocaleChange}
             value={i18n.language}
           >
@@ -35,13 +38,13 @@ const Header: FC = () => {
             }
           </select>
           <FontAwesomeIcon 
-            className="hidden md:inline-block pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center h-12 ml-4"
+            className="hidden sm:inline-block pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center h-12 ml-4"
             fixedWidth 
             icon={faGlobeAmericas}
           />
         </div>
         <button
-          className="neumorph shadow-neumorph-outset rounded-full p-3 focus:outline-none focus:shadow-lg active:shadow overflow-hidden w-12 h-12"
+          className="neumorph shadow-neumorph-outset rounded-full p-2 sm:p-3 focus:outline-none focus:shadow-lg active:shadow overflow-hidden w-10 h-10 sm:w-12 sm:h-12"
           title={t("change-theme")}
           onClick={() => setTheme(themes[theme])}
         >

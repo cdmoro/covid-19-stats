@@ -70,7 +70,6 @@ body {
     animation: waves 90s ease infinite;
 }
 
-
 @-webkit-keyframes waves {
     0%{background-position:0% 50%, 0}
     50%{background-position:100% 50%, 0}
@@ -85,6 +84,25 @@ body {
     0%{background-position:0% 50%, 0}
     50%{background-position:100% 50%, 0}
     100%{background-position:0% 50%, 0}
+}
+
+.virus-icon {
+    animation: virus 1s cubic-bezier(0.980, 0.000, 0.090, 2);
+}
+
+.virus-icon:hover {
+    transform: scale(1.25) rotate(360deg)
+}
+
+@keyframes virus {
+    from {
+        opacity: 0;
+        transform: scale(0) rotate(180deg)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg)
+    }
 }
 
 @tailwind utilities;
