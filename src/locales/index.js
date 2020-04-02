@@ -35,7 +35,7 @@ export default {
       'zoom-in': 'Acercar',
       'zoom-out': 'Alejar',
       'world-data': 'Datos mundiales',
-      'daily-stats': 'Estadísticas por día',
+      'daily-stats': 'Estadísticas diarias',
       'export-chart': 'Exportar gráfico'
     }
   },
@@ -55,8 +55,8 @@ export default {
       'zoom-in': 'Mais zoom',
       'zoom-out': 'Reduzir o zoom',
       'world-data': 'Dados mundiais',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': 'Estatísticas diárias',
+      'export-chart': 'Exportar gráfico'
     }
   },
   it: {
@@ -75,8 +75,8 @@ export default {
       'zoom-in': 'Ingrandire',
       'zoom-out': 'Rimpicciolisci',
       'world-data': 'Dati mondiali',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': 'Statistiche giornaliere',
+      'export-chart': 'Esporta grafico  '
     }
   },
   fr: {
@@ -95,8 +95,8 @@ export default {
       'zoom-in': 'Agrandir',
       'zoom-out': 'Dézoomer',
       'world-data': 'Données mondiales',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': 'Statistiques quotidiennes',
+      'export-chart': 'Exporter le graphique'
     }
   },
   ch: {
@@ -115,8 +115,8 @@ export default {
       'zoom-in': '放大',
       'zoom-out': '缩小',
       'world-data': '世界数据',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': '每日统计',
+      'export-chart': '出口图表'
     }
   },
   gr: {
@@ -135,8 +135,8 @@ export default {
       'zoom-in': 'Μεγέθυνση',
       'zoom-out': 'Σμίκρυνση',
       'world-data': 'Παγκόσμια δεδομένα',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': 'Καθημερινά στατιστικά στοιχεία',
+      'export-chart': 'Χάρτης εξαγωγών'
     }
   },
   ru: {
@@ -155,8 +155,8 @@ export default {
       'zoom-in': 'Приблизить',
       'zoom-out': 'Уменьшить',
       'world-data': 'Глобально',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': 'Ежедневная статистика',
+      'export-chart': 'Экспорт диаграммы'
     }
   },
   vn: {
@@ -175,8 +175,8 @@ export default {
       'zoom-in': 'Phóng to',
       'zoom-out': 'Thu nhỏ',
       'world-data': 'Toàn cầu',
-      'daily-stats': 'Estadísticas por día',
-      'export-chart': 'Export chart'
+      'daily-stats': 'Thống kê hàng ngày',
+      'export-chart': 'Biểu đồ xuất khẩu'
     }
   }
 }

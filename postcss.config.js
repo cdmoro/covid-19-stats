@@ -3,7 +3,8 @@ module.exports = {
         require('tailwindcss'),
         require('autoprefixer'),
         process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
-            whitelistPatterns: [/data-theme$/],
+            whitelist: ['data-theme'],
+            whitelistPatternsChildren: [/frappe-chart/],
             content: [
                 './src/**/*.tsx',
                 './public/index.html'

@@ -613,6 +613,10 @@ body {
   }
 }
 
+.frappe-chart text {
+  fill: var(--text-color) !important
+}
+
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
