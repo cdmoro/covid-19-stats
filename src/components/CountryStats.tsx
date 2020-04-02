@@ -37,11 +37,16 @@ const CountryStats: FC = () => {
     const [countriesData, setCountriesData] = useState<ICountryRest>({})
     
     const [countryData, countryLoading, cError] = useFetch(
-        `${COUNTRIES_URL}/${selectedCountry.name}`
+        `${COUNTRIES_URL}/${selectedCountry.iso2 || selectedCountry.name}`
     )
     
     const [countries] = useFetch<ICountry[]>(COUNTRIES_URL, (data: ICountries) => {
-      return data.countries
+      return data.countries.map((country: ICountry) => {
+        if (country.name === 'US')
+          country.name = 'United States'
+
+        return country
+      })
     })
 
     const countriesByContinents = useMemo(() => {
@@ -97,19 +102,15 @@ const CountryStats: FC = () => {
 
     return (
       <>
-        <div className="bg-map relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-120" style={{
-          backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
-        }}>
-          <WorldMap
-            countries={countries!}
-            selectedCountry={selectedCountry.iso2}
-            setSelectedCountry={(iso2: string) => {
-              try {
-                setSelectedCountry(getCountryByIso2(iso2))
-              } catch (e) {}
-            }}
-          />
-        </div>
+        <WorldMap
+          countries={countries!}
+          selectedCountry={selectedCountry.iso2}
+          setSelectedCountry={(iso2: string) => {
+            try {
+              setSelectedCountry(getCountryByIso2(iso2))
+            } catch (e) {}
+          }}
+        />
 
         <div className="flex items-center mb-4">
           <div className="h-12 w-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full shadow overflow-hidden mr-3 md:mr-4 transition-all duration-200 ease-in-out bg-muted">
@@ -161,7 +162,7 @@ const CountryStats: FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-center sx-2 sm:sx-5">
+        <div className="stats-cards flex justify-center sx-2 sm:sx-5">
           {cError.length > 0 && (
             <div className="text-center text-gray-500 ">
               <div className="font-sans text-5xl mb-3">¯\_(ツ)_/¯</div>
@@ -173,25 +174,21 @@ const CountryStats: FC = () => {
             <>
               <StatCard
                 title={`${t('confirmed')} (100%)`}
-                value={
-                  countryLoading ? undefined : countryData?.confirmed.value
-                }
+                value={countryData?.confirmed?.value}
               />
               <StatCard
                 title={`${t('recovered')} (${toPercentage(
                   countryData?.recovered.value,
                   countryData?.confirmed.value
                 )})`}
-                value={
-                  countryLoading ? undefined : countryData?.recovered.value
-                }
+                value={countryData?.recovered?.value}
               />
               <StatCard
                 title={`${t('deaths')} (${toPercentage(
                   countryData?.deaths.value,
                   countryData?.confirmed.value
                 )})`}
-                value={countryLoading ? undefined : countryData?.deaths.value}
+                value={countryData?.deaths?.value}
               />
             </>
           )}

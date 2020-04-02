@@ -105,4 +105,36 @@ body {
     }
 }
 
+.stats-cards {
+    animation: stats .3s ease-in-out;
+}
+
+@keyframes stats {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+.map {
+    animation: zoom .3s ease-out;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.frappe-chart text {
+    fill: var(--text-color) !important
+}
+
 @tailwind utilities;

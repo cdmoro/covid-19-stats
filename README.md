@@ -12,6 +12,7 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - Tailwind CSS
 - [SVG Pan Zoom](https://github.com/ariutta/svg-pan-zoom)
 - Hammerjs
+- Frappe charts
 
 ## Features
 
@@ -36,6 +37,7 @@ Get the latest COVID-19 stadistics by country. This is a result of messin' aroun
 - [x] Zoomable map
 - [x] Automatic/manual zoom mode
 - [x] Internationalization (i18n)
+- [x] Daily chart
 - [ ] PWA with push motifications
 - [ ] Geolocalization
 

@@ -217,7 +217,9 @@ const WorldMap: FC<Props> = ({
   }, [selectedCountry, setSelectedCountry, countries])
 
   return (  
-    <>
+    <div className="map bg-map relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-120" style={{
+      backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
+    }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         ref={worldMap}
@@ -265,7 +267,7 @@ const WorldMap: FC<Props> = ({
           -
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

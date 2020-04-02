@@ -14,7 +14,9 @@ export default {
       'automatic-manual-zoom': 'Automatic/manual zoom',
       'zoom-in': 'Zoom in',
       'zoom-out': 'Zoom out',
-      'world-data': 'World data'
+      'world-data': 'World data',
+      'daily-stats': 'Daily stats',
+      'export-chart': 'Export chart'
     }
   },
   es: {
@@ -32,7 +34,9 @@ export default {
       'automatic-manual-zoom': 'Zoom automático/manual',
       'zoom-in': 'Acercar',
       'zoom-out': 'Alejar',
-      'world-data': 'Datos mundiales'
+      'world-data': 'Datos mundiales',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Exportar gráfico'
     }
   },
   pt: {
@@ -50,7 +54,9 @@ export default {
       'automatic-manual-zoom': 'Zoom automático/manual',
       'zoom-in': 'Mais zoom',
       'zoom-out': 'Reduzir o zoom',
-      'world-data': 'Dados mundiais'
+      'world-data': 'Dados mundiais',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   },
   it: {
@@ -68,7 +74,9 @@ export default {
       'automatic-manual-zoom': 'Zoom automatico/manuale',
       'zoom-in': 'Ingrandire',
       'zoom-out': 'Rimpicciolisci',
-      'world-data': 'Dati mondiali'
+      'world-data': 'Dati mondiali',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   },
   fr: {
@@ -86,7 +94,9 @@ export default {
       'automatic-manual-zoom': 'Zoom automatique/manuel',
       'zoom-in': 'Agrandir',
       'zoom-out': 'Dézoomer',
-      'world-data': 'Données mondiales'
+      'world-data': 'Données mondiales',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   },
   ch: {
@@ -104,7 +114,9 @@ export default {
       'automatic-manual-zoom': '自动/手动变焦',
       'zoom-in': '放大',
       'zoom-out': '缩小',
-      'world-data': '世界数据'
+      'world-data': '世界数据',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   },
   gr: {
@@ -122,7 +134,9 @@ export default {
       'automatic-manual-zoom': 'Αυτόματο/χειροκίνητο ζουμ',
       'zoom-in': 'Μεγέθυνση',
       'zoom-out': 'Σμίκρυνση',
-      'world-data': 'Παγκόσμια δεδομένα'
+      'world-data': 'Παγκόσμια δεδομένα',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   },
   ru: {
@@ -140,7 +154,9 @@ export default {
       'automatic-manual-zoom': 'Автоматическое/ручное увеличение',
       'zoom-in': 'Приблизить',
       'zoom-out': 'Уменьшить',
-      'world-data': 'Глобально'
+      'world-data': 'Глобально',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   },
   vn: {
@@ -158,7 +174,9 @@ export default {
       'automatic-manual-zoom': 'Phóng to/thu nhỏ tự động/bằng tay',
       'zoom-in': 'Phóng to',
       'zoom-out': 'Thu nhỏ',
-      'world-data': 'Toàn cầu'
+      'world-data': 'Toàn cầu',
+      'daily-stats': 'Estadísticas por día',
+      'export-chart': 'Export chart'
     }
   }
 }
