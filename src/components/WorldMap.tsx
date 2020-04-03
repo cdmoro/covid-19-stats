@@ -217,7 +217,7 @@ const WorldMap: FC<Props> = ({
   }, [selectedCountry, setSelectedCountry, countries])
 
   return (  
-    <div className="map bg-map relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-120" style={{
+    <div className="map bg-map relative neumorph sm:shadow-neumorph-inset mb-4 lg:mb-0 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-auto" style={{
       backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
     }}>
       <svg
@@ -227,10 +227,6 @@ const WorldMap: FC<Props> = ({
         width="100%"
         height="100%"
         viewBox="0 0 2000 1001"
-        // onClick={() => {
-        //   if (isDragging)
-        //     setIsDragging(false)
-        // }}
       >
         <g className="svg-pan-zoom_viewport transition-transform duration-150">
           {countryPaths}

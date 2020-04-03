@@ -5,6 +5,8 @@ import { DAILY_URL } from '../api'
 import { Chart } from 'frappe-charts/dist/frappe-charts.esm'
 import "frappe-charts/dist/frappe-charts.min.css"
 import { useTranslation } from 'react-i18next'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 interface Day {
     reportDate: string,
@@ -81,13 +83,15 @@ const DailyStats: FC = () => {
         <div className="flex justify-between">
           <h2 className="my-3 text-2xl">{t("daily-stats")}</h2>
           <button 
-            className="text-sm uppercase font-bold text-accent underline hover:no-underline"
+            className="text-sm uppercase font-bold text-accent px-4"
+            title={t('export-chart')}
             onClick={() => {
                 // @ts-ignore
                 chart.current?.export()
             }}
             >
-            {t('export-chart')}
+            <FontAwesomeIcon size="lg" fixedWidth icon={faDownload} />
+            <span className="sr-only md:inline md:relative md:ml-2">{t('export-chart')}</span>
           </button>
         </div>
 

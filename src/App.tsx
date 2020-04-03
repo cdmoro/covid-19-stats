@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 const App: FC = () => {
   return (
     <div className="App md:flex md:justify-center md:items-center min-h-screen p-4">
-      <div className="md:w-10/12 lg:w-7/12">
+      <div className="md:w-10/12 lg:w-8/12">
         <Header/>
         <CountryStats />
         <WorldStats />
