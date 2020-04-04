@@ -114,17 +114,17 @@ const CountryStats: FC = () => {
 
         <div className="neumorph lg:shadow-neumorph-inset lg:hover:shadow-neumorph-outset lg:p-4 lg:ml-5 lg:w-4/12">
           <div className="flex flex-row lg:flex-col items-center mb-4">
-            <div className="h-12 w-12 md:w-16 md:h-16 lg:w-full lg:h-40 rounded-full lg:rounded-md shadow lg:shadow-none overflow-hidden mr-3 md:mr-4 lg:mr-0 lg:mb-3 transition-all duration-200 ease-in-out bg-muted">
+            <div className="h-12 w-12 md:w-16 md:h-16 lg:w-full lg:h-40 rounded-full lg:rounded-md lg:rounded-b-none shadow lg:shadow-none overflow-hidden mr-3 md:mr-4 lg:mr-0 lg:mb-px transition-all duration-200 ease-in-out bg-muted">
               <img
                 className="h-full object-cover lg:w-full"
                 src={countriesData[selectedCountry.iso2]?.flag}
                 alt=""
               />
             </div>
-            <div className="flex-grow">
+            <div className="flex-grow lg:w-full">
               <div className="relative">
                 <select
-                  className="block appearance-none text-gray-900 w-full p-1 lg:p-2 rounded-md mb-1 md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow leading-tight"
+                  className="block appearance-none text-gray-900 w-full p-1 lg:p-2 rounded-md lg:rounded-t-none mb-1 md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow leading-tight"
                   disabled={countryLoading}
                   onChange={handleCountrySelection}
                   value={JSON.stringify(selectedCountry)}
@@ -141,7 +141,7 @@ const CountryStats: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="text-xs md:text-sm text-muted flex sx-4">
+              <div className="text-xs md:text-sm text-muted flex sx-4 lg:justify-center">
                 <span>
                   <FontAwesomeIcon
                     className="mr-1"
