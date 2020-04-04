@@ -112,9 +112,9 @@ const CountryStats: FC = () => {
           }}
         />
 
-        <div className="neumorph lg:shadow-neumorph-inset lg:hover:shadow-neumorph-outset lg:p-4 lg:ml-5 lg:w-4/12">
-          <div className="flex flex-row lg:flex-col items-center mb-4">
-            <div className="h-12 w-12 md:w-16 md:h-16 lg:w-full lg:h-40 rounded-full lg:rounded-md lg:rounded-b-none shadow lg:shadow-none overflow-hidden mr-3 md:mr-4 lg:mr-0 lg:mb-px transition-all duration-200 ease-in-out bg-muted">
+        <div className="neumorph lg:shadow-neumorph-inset lg:hover:shadow-neumorph-outset lg:ml-5 lg:w-4/12 lg:overflow-hidden">
+          <div className="flex flex-row lg:flex-col items-center mb-4 lg:mb-0">
+            <div className="h-12 w-12 md:w-16 md:h-16 lg:w-full lg:h-40 rounded-full lg:rounded-none shadow lg:shadow-none overflow-hidden mr-3 md:mr-4 lg:mr-0 lg:mb-px transition-all duration-200 ease-in-out bg-muted">
               <img
                 className="h-full object-cover lg:w-full"
                 src={countriesData[selectedCountry.iso2]?.flag}
@@ -124,7 +124,7 @@ const CountryStats: FC = () => {
             <div className="flex-grow lg:w-full">
               <div className="relative">
                 <select
-                  className="block appearance-none text-gray-900 w-full p-1 lg:p-2 rounded-md lg:rounded-t-none mb-1 md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow leading-tight"
+                  className="block appearance-none text-gray-900 w-full p-1 lg:p-2 rounded-md lg:rounded-none mb-1 md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow leading-tight"
                   disabled={countryLoading}
                   onChange={handleCountrySelection}
                   value={JSON.stringify(selectedCountry)}
@@ -163,9 +163,9 @@ const CountryStats: FC = () => {
             </div>
           </div>
 
-          <div className="stats-cards flex flex-row lg:flex-col justify-center sx-2 sm:sx-5 lg:sx-0 lg:sy-3">
+          <div className="stats-cards flex flex-row lg:flex-col justify-center sx-2 sm:sx-5 lg:sx-0 lg:sy-3 lg:text-center lg:p-4">
             {cError.length > 0 && (
-              <div className="text-center text-gray-500 ">
+              <div className="text-gray-500">
                 <div className="font-sans text-5xl mb-3">¯\_(ツ)_/¯</div>
                 <div>{cError}</div>
               </div>

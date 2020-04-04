@@ -1213,18 +1213,8 @@ body {
 
 @media (min-width: 1024px) {
 
-  .lg\:rounded-md {
-    border-radius: 0.375rem;
-  }
-
-  .lg\:rounded-t-none {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  .lg\:rounded-b-none {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  .lg\:rounded-none {
+    border-radius: 0;
   }
 
   .lg\:flex {
@@ -1277,6 +1267,10 @@ body {
     margin-bottom: 1px;
   }
 
+  .lg\:overflow-hidden {
+    overflow: hidden;
+  }
+
   .lg\:p-0 {
     padding: 0;
   }
@@ -1303,6 +1297,10 @@ body {
 
   .lg\:hover\:shadow-neumorph-outset:hover {
     box-shadow: var(--outset-shadow);
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-xl {
