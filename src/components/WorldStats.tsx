@@ -14,32 +14,36 @@ const WorldStats: FC = () => {
     
     return (
       <>
-        <h2 className="my-3 text-2xl">{t("world-data")}</h2>
+        <div className="lg:flex">
+          <div className="lg:mr-5 lg:w-3/12">
+            <h2 className="my-3 text-2xl">{t("world-data")}</h2>
 
-        {error.length === 0 && (
-          <div className="stats-cards flex sx-2 sm:sx-5">
-            <StatCard
-              title={`${t("confirmed")} (100%)`}
-              value={data?.confirmed?.value}
-            />
-            <StatCard
-              title={`${t("recovered")} (${toPercentage(
-                data?.recovered?.value,
-                data?.confirmed?.value
-              )})`}
-              value={data?.recovered?.value}
-            />
-            <StatCard
-              title={`${t("deaths")} (${toPercentage(
-                data?.deaths?.value,
-                data?.confirmed?.value
-              )})`}
-              value={data?.deaths?.value}
-            />
+            {error.length === 0 && (
+              <div className="stats-cards flex sx-2 sm:sx-5 lg:flex-col lg:sy-5 lg:sx-0">
+                <StatCard
+                  title={`${t("confirmed")} (100%)`}
+                  value={data?.confirmed?.value}
+                />
+                <StatCard
+                  title={`${t("recovered")} (${toPercentage(
+                    data?.recovered?.value,
+                    data?.confirmed?.value
+                  )})`}
+                  value={data?.recovered?.value}
+                />
+                <StatCard
+                  title={`${t("deaths")} (${toPercentage(
+                    data?.deaths?.value,
+                    data?.confirmed?.value
+                  )})`}
+                  value={data?.deaths?.value}
+                />
+              </div>
+            )}
           </div>
-        )}
 
-        <DailyStats />
+          <DailyStats />
+        </div>
 
         <div className="mt-3 text-xs text-muted text-center">
           <span>{t("last-updated")}: </span>

@@ -112,7 +112,7 @@ const CountryStats: FC = () => {
           }}
         />
 
-        <div className="neumorph lg:shadow-neumorph-inset lg:p-4 lg:ml-5 lg:w-4/12">
+        <div className="neumorph lg:shadow-neumorph-inset lg:hover:shadow-neumorph-outset lg:p-4 lg:ml-5 lg:w-4/12">
           <div className="flex flex-row lg:flex-col items-center mb-4">
             <div className="h-12 w-12 md:w-16 md:h-16 lg:w-full lg:h-40 rounded-full lg:rounded-md shadow lg:shadow-none overflow-hidden mr-3 md:mr-4 lg:mr-0 lg:mb-3 transition-all duration-200 ease-in-out bg-muted">
               <img

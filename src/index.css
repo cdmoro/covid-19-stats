@@ -1222,6 +1222,11 @@ body {
     border-radius: 0.375rem;
   }
 
+  .lg\:flex {
+    display: -webkit-box;
+    display: flex;
+  }
+
   .lg\:flex-row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1254,6 +1259,10 @@ body {
     margin-bottom: 0.75rem;
   }
 
+  .lg\:mr-5 {
+    margin-right: 1.25rem;
+  }
+
   .lg\:ml-5 {
     margin-left: 1.25rem;
   }
@@ -1282,8 +1291,16 @@ body {
     box-shadow: none;
   }
 
+  .lg\:hover\:shadow-neumorph-outset:hover {
+    box-shadow: var(--outset-shadow);
+  }
+
   .lg\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .lg\:w-3\/12 {
+    width: 25%;
   }
 
   .lg\:w-4\/12 {
@@ -1304,5 +1321,9 @@ body {
 
   .lg\:sy-3 > * + * {
     margin-top: 0.75rem;
+  }
+
+  .lg\:sy-5 > * + * {
+    margin-top: 1.25rem;
   }
 }

@@ -57,7 +57,7 @@ const DailyStats: FC = () => {
             hideDots: 1,
             regionFill: 1
           },
-          height: 400,
+          height: 276,
           colors: ['green', 'red'],
           tooltipOptions: {
             formatTooltipY: (d: number) => d.toLocaleString()
@@ -79,7 +79,7 @@ const DailyStats: FC = () => {
     }, [dataChart])
 
     return (
-      <>
+      <div className="flex-grow">
         <div className="flex justify-between">
           <h2 className="my-3 text-2xl">{t("daily-stats")}</h2>
           <button 
@@ -95,10 +95,10 @@ const DailyStats: FC = () => {
           </button>
         </div>
 
-        <div className="daily-stats neumorph shadow-neumorph-inset px-4 py-3">
+        <div className="daily-stats neumorph shadow-neumorph-inset px-4 py-3 hover:shadow-neumorph-outset">
           <div id="daily-chart"></div>
         </div>
-      </>
+      </div>
     )
 }
 
