@@ -65,9 +65,7 @@ body {
 .bg-map {
     background: transparent;
     background-size: 35%, 100%;
-    -webkit-animation: waves 90s ease infinite;
-    -moz-animation: waves 90s ease infinite;
-    animation: waves 90s ease infinite;
+    animation: waves 90s ease infinite, zoom .3s ease-out;
 }
 
 @-webkit-keyframes waves {
@@ -118,10 +116,6 @@ body {
         opacity: 1;
         transform: translateY(0px)
     }
-}
-
-.map {
-    animation: zoom .3s ease-out;
 }
 
 @keyframes zoom {
