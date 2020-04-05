@@ -1243,6 +1243,11 @@ body {
             justify-content: center;
   }
 
+  .lg\:flex-grow {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+  }
+
   .lg\:h-40 {
     height: 10rem;
   }

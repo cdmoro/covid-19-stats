@@ -216,10 +216,13 @@ const WorldMap: FC<Props> = ({
     })
   }, [selectedCountry, setSelectedCountry, countries])
 
-  return (  
-    <div className="relative h-56 mb-4 overflow-hidden map bg-map neumorph sm:shadow-neumorph-inset sm:hover:shadow-neumorph-outset lg:mb-0 sm:h-64 md:h-92 lg:h-auto" style={{
-      backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
-    }}>
+  return (
+    <div 
+      className="relative h-56 mb-4 overflow-hidden map bg-map neumorph sm:shadow-neumorph-inset sm:hover:shadow-neumorph-outset lg:mb-0 sm:h-64 md:h-92 lg:h-auto lg:flex-grow" 
+      style={{
+        backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         ref={worldMap}

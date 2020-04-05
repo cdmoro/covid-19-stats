@@ -23,7 +23,7 @@ i18n
     resources: locales,
     fallbackLng: 'en',
 
-    debug: true,
+    debug: process.env.NODE_ENV === 'production' ? false : true,
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
