@@ -83,7 +83,7 @@ const DailyStats: FC = () => {
         <div className="flex justify-between">
           <h2 className="my-3 text-2xl">{t("daily-stats")}</h2>
           <button 
-            className="text-sm uppercase font-bold text-accent px-4"
+            className="px-4 text-sm font-bold uppercase text-accent"
             title={t('export-chart')}
             onClick={() => {
                 // @ts-ignore
@@ -95,7 +95,7 @@ const DailyStats: FC = () => {
           </button>
         </div>
 
-        <div className="daily-stats neumorph shadow-neumorph-inset px-4 py-3 hover:shadow-neumorph-outset">
+        <div className="px-4 py-3 daily-stats neumorph shadow-neumorph-inset hover:shadow-neumorph-outset">
           <div id="daily-chart"></div>
         </div>
       </div>

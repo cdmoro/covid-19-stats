@@ -207,7 +207,7 @@ const WorldMap: FC<Props> = ({
           <path
             key={country.id}
             d={country.shape}
-            className="fill-current opacity-75 stroke-gray-500"
+            className="opacity-75 fill-current stroke-gray-500"
           >
             <title>{countryName} (no data)</title>
           </path>
@@ -217,7 +217,7 @@ const WorldMap: FC<Props> = ({
   }, [selectedCountry, setSelectedCountry, countries])
 
   return (  
-    <div className="map bg-map relative neumorph sm:shadow-neumorph-inset mb-4 lg:mb-0 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-auto" style={{
+    <div className="relative h-56 mb-4 overflow-hidden map bg-map neumorph sm:shadow-neumorph-inset sm:hover:shadow-neumorph-outset lg:mb-0 sm:h-64 md:h-92 lg:h-auto" style={{
       backgroundImage: 'url("bg-map.png"), linear-gradient(90deg, rgba(118,171,255,0.1) 0%, rgba(118,171,255,0.4) 40%, rgba(118,171,255,0.4) 60%, rgba(118,171,255,0.1) 100%)'
     }}>
       <svg
@@ -228,7 +228,7 @@ const WorldMap: FC<Props> = ({
         height="100%"
         viewBox="0 0 2000 1001"
       >
-        <g className="svg-pan-zoom_viewport transition-transform duration-150">
+        <g className="transition-transform duration-150 svg-pan-zoom_viewport">
           {countryPaths}
         </g>
       </svg>
@@ -249,14 +249,14 @@ const WorldMap: FC<Props> = ({
           <FontAwesomeIcon fixedWidth icon={automaticZoom ? faLock : faUnlock} />
         </button>
         <button
-          className="btn-map text-lg"
+          className="text-lg btn-map"
           title={t('zoom-in')}
           onClick={() => panZoomWorldMap?.current?.zoomIn()}
         >
           +
         </button>
         <button
-          className="btn-map text-lg"
+          className="text-lg btn-map"
           title={t('zoom-out')}
           onClick={() => panZoomWorldMap?.current?.zoomOut()}
         >

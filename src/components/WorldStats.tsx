@@ -19,7 +19,7 @@ const WorldStats: FC = () => {
             <h2 className="my-3 text-2xl">{t("world-data")}</h2>
 
             {error.length === 0 && (
-              <div className="stats-cards flex sx-2 sm:sx-5 lg:flex-col lg:sy-5 lg:sx-0">
+              <div className="flex stats-cards sx-2 sm:sx-5 lg:flex-col lg:sy-5 lg:sx-0">
                 <StatCard
                   title={`${t("confirmed")} (100%)`}
                   value={data?.confirmed?.value}
@@ -45,7 +45,7 @@ const WorldStats: FC = () => {
           <DailyStats />
         </div>
 
-        <div className="mt-3 text-xs text-muted text-center">
+        <div className="mt-3 text-xs text-center text-muted">
           <span>{t("last-updated")}: </span>
           {data?.lastUpdate && (
             <>

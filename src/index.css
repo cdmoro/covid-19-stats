@@ -1106,6 +1106,10 @@ body {
     box-shadow: var(--inset-shadow);
   }
 
+  .sm\:hover\:shadow-neumorph-outset:hover {
+    box-shadow: var(--outset-shadow);
+  }
+
   .sm\:text-sm {
     font-size: 0.875rem;
   }

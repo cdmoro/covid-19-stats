@@ -113,10 +113,10 @@ const CountryStats: FC = () => {
         />
 
         <div className="neumorph lg:shadow-neumorph-inset lg:hover:shadow-neumorph-outset lg:ml-5 lg:w-4/12 lg:overflow-hidden">
-          <div className="flex flex-row lg:flex-col items-center mb-4 lg:mb-0">
-            <div className="h-12 w-12 md:w-16 md:h-16 lg:w-full lg:h-40 rounded-full lg:rounded-none shadow lg:shadow-none overflow-hidden mr-3 md:mr-4 lg:mr-0 lg:mb-px transition-all duration-200 ease-in-out bg-muted">
+          <div className="flex flex-row items-center mb-4 lg:flex-col lg:mb-0">
+            <div className="w-12 h-12 mr-3 overflow-hidden transition-all duration-200 ease-in-out rounded-full shadow md:w-16 md:h-16 lg:w-full lg:h-40 lg:rounded-none lg:shadow-none md:mr-4 lg:mr-0 lg:mb-px bg-muted">
               <img
-                className="h-full object-cover lg:w-full"
+                className="object-cover h-full lg:w-full"
                 src={countriesData[selectedCountry.iso2]?.flag}
                 alt=""
               />
@@ -124,16 +124,16 @@ const CountryStats: FC = () => {
             <div className="flex-grow lg:w-full">
               <div className="relative">
                 <select
-                  className="block appearance-none text-gray-900 w-full p-1 lg:p-2 rounded-md lg:rounded-none mb-1 md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow leading-tight"
+                  className="block w-full p-1 mb-1 leading-tight text-gray-900 rounded-md appearance-none lg:p-2 lg:rounded-none md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow"
                   disabled={countryLoading}
                   onChange={handleCountrySelection}
                   value={JSON.stringify(selectedCountry)}
                 >
                   {countriesByContinents}
                 </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
                   <svg
-                    className="fill-current h-4 w-4"
+                    className="w-4 h-4 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
@@ -141,7 +141,7 @@ const CountryStats: FC = () => {
                   </svg>
                 </div>
               </div>
-              <div className="text-xs md:text-sm text-muted flex sx-4 lg:justify-center">
+              <div className="flex text-xs md:text-sm text-muted sx-4 lg:justify-center">
                 <span>
                   <FontAwesomeIcon
                     className="mr-1"
@@ -163,10 +163,10 @@ const CountryStats: FC = () => {
             </div>
           </div>
 
-          <div className="stats-cards flex flex-row lg:flex-col justify-center sx-2 sm:sx-5 lg:sx-0 lg:sy-3 lg:text-center lg:p-4">
+          <div className="flex flex-row justify-center stats-cards lg:flex-col sx-2 sm:sx-5 lg:sx-0 lg:sy-3 lg:text-center lg:p-4">
             {cError.length > 0 && (
               <div className="text-gray-500">
-                <div className="font-sans text-5xl mb-3">¯\_(ツ)_/¯</div>
+                <div className="mb-3 font-sans text-5xl">¯\_(ツ)_/¯</div>
                 <div>{cError}</div>
               </div>
             )}

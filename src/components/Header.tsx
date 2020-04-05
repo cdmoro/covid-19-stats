@@ -20,14 +20,14 @@ const Header: FC = () => {
     }
 
     return (
-      <div className="header flex items-center p-3 mb-1">
-        <h1 className="text-xl sm:text-2xl flex-1">
-          <FontAwesomeIcon className="virus-icon transition-all duration-200 ease-in-out text-accent mr-2" size="lg" fixedWidth icon={faVirus} />
+      <div className="flex items-center p-3 mb-1 header">
+        <h1 className="flex-1 text-xl sm:text-2xl">
+          <FontAwesomeIcon className="mr-2 transition-all duration-200 ease-in-out virus-icon text-accent" size="lg" fixedWidth icon={faVirus} />
           {t("title")}
         </h1>
-        <div className="inline-block relative text-accent">
+        <div className="relative inline-block text-accent">
           <select
-            className="cursor-pointer text-xs sm:text-sm font-bold uppercase focus:outline-none appearance-none bg-transparent h-10 sm:h-12 pr-3 pl-3 sm:pl-10"
+            className="h-10 pl-3 pr-3 text-xs font-bold uppercase bg-transparent appearance-none cursor-pointer sm:text-sm focus:outline-none sm:h-12 sm:pl-10"
             onChange={handleLocaleChange}
             value={i18n.language}
           >
@@ -40,17 +40,17 @@ const Header: FC = () => {
             }
           </select>
           <FontAwesomeIcon 
-            className="hidden sm:inline-block pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center h-12 ml-4"
+            className="absolute inset-y-0 left-0 flex items-center justify-center hidden h-12 ml-4 pointer-events-none sm:inline-block"
             fixedWidth 
             icon={faGlobeAmericas}
           />
         </div>
         <button
-          className="neumorph shadow-neumorph-outset rounded-full p-2 sm:p-3 focus:outline-none focus:shadow-lg active:shadow overflow-hidden w-10 h-10 sm:w-12 sm:h-12"
+          className="w-10 h-10 p-2 overflow-hidden rounded-full neumorph shadow-neumorph-outset sm:p-3 focus:outline-none focus:shadow-lg active:shadow sm:w-12 sm:h-12"
           title={t("change-theme")}
           onClick={() => setTheme(themes[theme])}
         >
-          <div className="flex w-20 justify-between transform transition-transform duration-200 text-accent -translate-x-px">
+          <div className="flex justify-between w-20 transition-transform duration-200 transform -translate-x-px text-accent">
             <FontAwesomeIcon size="lg" fixedWidth icon={faMoon} />
             <FontAwesomeIcon size="lg" fixedWidth icon={faSun} />
           </div>
