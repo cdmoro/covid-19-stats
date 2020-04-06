@@ -10,7 +10,6 @@ Get the latest COVID-19 statistics by country. This is a result of messin' aroun
 - React hooks
 - Typescript
 - Tailwind CSS
-- [SVG Pan Zoom](https://github.com/ariutta/svg-pan-zoom)
 - Hammerjs
 - Frappe charts
 
@@ -38,7 +37,8 @@ Get the latest COVID-19 statistics by country. This is a result of messin' aroun
 - [x] Automatic/manual zoom mode
 - [x] Internationalization (i18n)
 - [x] Daily chart
-- [ ] PWA with push motifications
+- [x] PWA
+- [ ] Push notifications
 - [ ] Geolocalization
 
 ## Credits
@@ -46,6 +46,7 @@ Get the latest COVID-19 statistics by country. This is a result of messin' aroun
 - [COVID-19 API Rest](https://github.com/mathdroid/covid-19-api) for the stats
 - [Rest countries API](http://restcountries.eu/)
 - [Neumorphism generator](https://neumorphism.io/)
+- [SVG Pan Zoom](https://github.com/ariutta/svg-pan-zoom)
 
 ## License
 
