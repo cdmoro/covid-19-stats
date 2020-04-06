@@ -25,7 +25,7 @@ const Header: FC = () => {
       <div className="flex items-center p-3 mb-1 header">
         <h1 className="flex-1 text-xl sm:text-2xl">
           <img 
-            className="inline mr-2 lg:mr-3 transition-all duration-200 ease-in-out virus-icon text-accent w-10 lg:w-12" 
+            className="inline w-10 mr-2 transition-all duration-200 ease-in-out lg:mr-3 virus-icon text-accent lg:w-12" 
             src="logo192.png" 
             alt="COVID-19 stats main logo" 
           />
