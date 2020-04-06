@@ -28,6 +28,10 @@ body {
  * Render the `main` element consistently in IE.
  */
 
+main {
+  display: block;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -662,6 +666,10 @@ body {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: -webkit-box;
   display: flex;
@@ -1264,6 +1272,10 @@ body {
     margin-bottom: 0;
   }
 
+  .lg\:mr-3 {
+    margin-right: 0.75rem;
+  }
+
   .lg\:mr-5 {
     margin-right: 1.25rem;
   }
@@ -1314,6 +1326,10 @@ body {
 
   .lg\:text-xl {
     font-size: 1.25rem;
+  }
+
+  .lg\:w-12 {
+    width: 3rem;
   }
 
   .lg\:w-3\/12 {

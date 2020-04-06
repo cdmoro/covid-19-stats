@@ -2,8 +2,10 @@ import React, { FC, useEffect } from 'react'
 import { useTranslation } from "react-i18next"
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun, faGlobeAmericas, faVirus } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSun, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
 import locales from '../locales'
+
+type localesKey = keyof typeof locales
 
 const Header: FC = () => {
     const [theme, setTheme] = useLocalStorage('theme', 'dark')
@@ -22,7 +24,11 @@ const Header: FC = () => {
     return (
       <div className="flex items-center p-3 mb-1 header">
         <h1 className="flex-1 text-xl sm:text-2xl">
-          <FontAwesomeIcon className="mr-2 transition-all duration-200 ease-in-out virus-icon text-accent" size="lg" fixedWidth icon={faVirus} />
+          <img 
+            className="inline mr-2 lg:mr-3 transition-all duration-200 ease-in-out virus-icon text-accent w-10 lg:w-12" 
+            src="logo192.png" 
+            alt="COVID-19 stats main logo" 
+          />
           {t("title")}
         </h1>
         <div className="relative inline-block text-accent">
@@ -34,7 +40,7 @@ const Header: FC = () => {
             {
               Object.keys(locales).sort().map((key: string) => (
                 <option key={key} value={key}>
-                  {locales[key as keyof typeof locales].name}
+                  {locales[key as localesKey].name}
                 </option>
               ))
             }
