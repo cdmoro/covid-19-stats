@@ -26,6 +26,8 @@ Get the latest COVID-19 statistics by country. This is a result of messin' aroun
     - Greek
     - Italian
     - Portuguese
+    - Russian
+    - Vietnamese
 
 ## Todos
 
