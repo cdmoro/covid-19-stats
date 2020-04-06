@@ -1,8 +1,14 @@
-## COVID-19 Stats
+# COVID-19 stats
 
 Get the latest COVID-19 statistics by country. This is a result of messin' around with a public [covid-19 API Rest](https://github.com/mathdroid/covid-19-api). However, this project is in early stages, there are more features in the future!
 
-![App screenshot](https://i.imgur.com/I7pQ84b.png)
+## Mobile
+
+![Mobile screenshot](https://i.imgur.com/I7pQ84b.png)
+
+## Destkop
+
+![Desktop screenshot](https://i.imgur.com/6dQIJ5y.png)
 
 ## Made with
 
