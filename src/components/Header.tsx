@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, useMemo } from 'react'
 import { useTranslation } from "react-i18next"
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,6 +11,9 @@ const Header: FC = () => {
     const [theme, setTheme] = useLocalStorage('theme', 'dark')
     const themes: Record<string, any> = { dark: 'light', light: 'dark'}
     const { t, i18n } = useTranslation()
+    const languageSelected = useMemo(() => {
+      return i18n.language.split('-')[0]
+    }, [i18n.language])
 
     useEffect(() => {
         document.documentElement.dataset.theme = theme
@@ -35,7 +38,7 @@ const Header: FC = () => {
           <select
             className="h-10 pl-3 pr-3 text-xs font-bold uppercase bg-transparent appearance-none cursor-pointer sm:text-sm focus:outline-none sm:h-12 sm:pl-10"
             onChange={handleLocaleChange}
-            value={i18n.language}
+            value={languageSelected}
           >
             {
               Object.keys(locales).sort().map((key: string) => (
