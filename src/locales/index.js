@@ -178,5 +178,45 @@ export default {
       'daily-stats': 'Thống kê hàng ngày',
       'export-chart': 'Biểu đồ xuất khẩu'
     }
+  },
+  hi: {
+    name: 'हिंदी',
+    translation: {
+      title: 'कोविड-19 जानकारी',
+      confirmed: 'कुल मामले',
+      recovered: 'कुल स्वस्थ',
+      deaths: 'कुल मृत संख्या',
+      'last-updated': 'आखिरी अद्यतन',
+      'provided-by': 'द्वारा उपलब्ध',
+      'powered-by': 'द्वारा समर्थित',
+      'change-theme': 'थीम बदलें',
+      'reset-position': 'स्थिति रीसेट करें',
+      'automatic-manual-zoom': 'ऑटोमॅटिक/मॅन्युअल झूम',
+      'zoom-in': 'झूम इन',
+      'zoom-out': 'झूम आऊट',
+      'world-data': 'पुरी दुनिया का डेटा',
+      'daily-stats': 'दैनिक स्थिति',
+      'export-chart': 'एक्स्पोर्ट चार्ट'
+    }
+  },
+  ma: {
+    name: 'मराठी',
+    translation: {
+      title: 'कोविड-१९ माहिती',
+      confirmed: 'एकूण निश्चित रुग्ण',
+      recovered: 'एकूण बरे झाले',
+      deaths: 'एकूण मृत संख्या',
+      'last-updated': 'शेवटच माहिती',
+      'provided-by': 'माहिती देणारे',
+      'powered-by': 'द्वारा समर्थित',
+      'change-theme': 'थिम बदल',
+      'reset-position': 'रीसेट पोसिशन',
+      'automatic-manual-zoom': 'ऑटोमॅटिक/मॅन्युअल झूम',
+      'zoom-in': 'झूम इन',
+      'zoom-out': 'झूम आऊट',
+      'world-data': 'जगातील संख्या',
+      'daily-stats': 'दैनंदिन माहिती',
+      'export-chart': 'एक्स्पोर्ट चार्ट'
+    }
   }
 }
