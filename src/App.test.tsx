@@ -1,9 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { mount } from '@cypress/react';
 import App from './App';
+import './index.css';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('visual', () => {
+  it('renders title', () => {
+    mount(<App />);
+    cy.get('h1').contains('title'); 
+  });
 });

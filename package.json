@@ -30,11 +30,13 @@
   "scripts": {
     "start": "npm run watch:css & react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!frappe-charts)/\"",
     "eject": "react-scripts eject",
     "build:css": "postcss src/styles/tailwind.css -o src/index.css --env production",
     "watch:css": "postcss src/styles/tailwind.css -o src/index.css -w",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "cypress:open": "cypress open",
+    "cypress:unit": "cypress open-ct"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,8 +54,11 @@
     ]
   },
   "devDependencies": {
+    "@cypress/react": "^5.9.1",
+    "@cypress/webpack-dev-server": "^1.4.0",
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
+    "cypress": "^7.5.0",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
   }

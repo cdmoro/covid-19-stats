@@ -65,7 +65,7 @@ const DailyStats: FC = () => {
         }
         },
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      [daily, i18n.language]
+      [daily, i18n?.language]
     )
 
     useEffect(() => {
