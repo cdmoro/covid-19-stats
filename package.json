@@ -36,7 +36,8 @@
     "watch:css": "postcss src/styles/tailwind.css -o src/index.css -w",
     "deploy": "./deploy.sh",
     "cypress:open": "cypress open",
-    "cypress:unit": "cypress open-ct"
+    "cypress:unit": "cypress open-ct",
+    "cypress:record": "cypress run --record --key b2f585c8-8245-4ace-8dc4-f0f2652c729a"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,7 +59,7 @@
     "@cypress/webpack-dev-server": "^1.4.0",
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
-    "cypress": "^7.5.0",
+    "cypress": "7.6.0",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
   }

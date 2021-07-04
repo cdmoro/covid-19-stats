@@ -124,6 +124,7 @@ const CountryStats: FC = () => {
             <div className="flex-grow lg:w-full">
               <div className="relative">
                 <select
+                  id="country-select"
                   className="block w-full p-1 mb-1 leading-tight text-gray-900 rounded-md appearance-none lg:p-2 lg:rounded-none md:mb-2 md:text-lg lg:text-xl bg-primary text-back focus:outline-none focus:outline-shadow"
                   disabled={countryLoading}
                   onChange={handleCountrySelection}

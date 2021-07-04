@@ -921,16 +921,6 @@
   resolved "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-10.1.0.tgz"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-"@cypress/listr-verbose-renderer@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmjs.org/@cypress/listr-verbose-renderer/-/listr-verbose-renderer-0.4.1.tgz"
-  integrity sha1-p3SS9LEdzHxEajSz4ochr9M8ZCo=
-  dependencies:
-    chalk "^1.1.3"
-    cli-cursor "^1.0.2"
-    date-fns "^1.27.2"
-    figures "^1.7.0"
-
 "@cypress/mount-utils@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@cypress/mount-utils/-/mount-utils-1.0.2.tgz#afbc4f8c350b7cd86edc5ad0db0cbe1e0181edc8"
@@ -1900,6 +1890,11 @@ ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-3.2.4.tgz"
   integrity sha512-hHUXGagefjN2iRrID63xckIvotOXOojhQKWIPUZ4mNUZ9nLZW+7FMNoE1lOkEhNWYsx/7ysGIuJYCiMAA9FnrA==
+
+ansi-colors@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
+  integrity sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==
 
 ansi-escapes@^3.0.0:
   version "3.2.0"
@@ -2928,13 +2923,6 @@ clean-stack@^2.0.0:
   resolved "https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz"
   integrity sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==
 
-cli-cursor@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/cli-cursor/-/cli-cursor-1.0.2.tgz"
-  integrity sha1-ZNo/fValRBLll5S9Ytw1KV6PKYc=
-  dependencies:
-    restore-cursor "^1.0.1"
-
 cli-cursor@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz"
@@ -3598,12 +3586,11 @@ cyclist@^1.0.1:
   resolved "https://registry.npmjs.org/cyclist/-/cyclist-1.0.1.tgz"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress@^7.5.0:
-  version "7.5.0"
-  resolved "https://registry.npmjs.org/cypress/-/cypress-7.5.0.tgz"
-  integrity sha512-tw3v6nrTJoEzT37+Nf6RK+DvdTfhMb8EJYskZx7oskZ+J9qQ1QHWA4dH8Eoe/Mr/wE47o+7PK6O9tgqhRy6IHg==
+cypress@7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-7.6.0.tgz#80fe7496cd4165a0fa06e25fc11413dda4544463"
+  integrity sha512-tTwQExY28CKt6cY85/2V1uLExcMfpBEBWXt/EcE2ht/Onl9k4lxUS7ul1UnUO5MrYwMIHMdGVh13DxdzXj4Z5w==
   dependencies:
-    "@cypress/listr-verbose-renderer" "^0.4.1"
     "@cypress/request" "^2.88.5"
     "@cypress/xvfb" "^1.2.4"
     "@types/node" "^14.14.31"
@@ -3615,15 +3602,18 @@ cypress@^7.5.0:
     cachedir "^2.3.0"
     chalk "^4.1.0"
     check-more-types "^2.24.0"
+    cli-cursor "^3.1.0"
     cli-table3 "~0.6.0"
     commander "^5.1.0"
     common-tags "^1.8.0"
     dayjs "^1.10.4"
-    debug "4.3.2"
+    debug "^4.3.2"
+    enquirer "^2.3.6"
     eventemitter2 "^6.4.3"
     execa "4.1.0"
     executable "^4.1.1"
     extract-zip "2.0.1"
+    figures "^3.2.0"
     fs-extra "^9.1.0"
     getos "^3.2.1"
     is-ci "^3.0.0"
@@ -3672,11 +3662,6 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-fns@^1.27.2:
-  version "1.30.1"
-  resolved "https://registry.npmjs.org/date-fns/-/date-fns-1.30.1.tgz"
-  integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
-
 date-fns@^2.11.0:
   version "2.11.0"
   resolved "https://registry.npmjs.org/date-fns/-/date-fns-2.11.0.tgz"
@@ -3701,7 +3686,7 @@ debug@4.1.1, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debug@4.3.2:
+debug@4.3.2, debug@^4.3.2:
   version "4.3.2"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.2.tgz"
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
@@ -4094,6 +4079,13 @@ enhanced-resolve@^4.1.0:
     memory-fs "^0.5.0"
     tapable "^1.0.0"
 
+enquirer@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
+  integrity sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
+  dependencies:
+    ansi-colors "^4.1.1"
+
 entities@^1.1.1:
   version "1.1.2"
   resolved "https://registry.npmjs.org/entities/-/entities-1.1.2.tgz"
@@ -4475,11 +4467,6 @@ executable@^4.1.1:
   dependencies:
     pify "^2.2.0"
 
-exit-hook@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/exit-hook/-/exit-hook-1.1.1.tgz"
-  integrity sha1-8FyiM7SMBdVP/wd2XfhQfpXAL/g=
-
 exit@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
@@ -4696,18 +4683,17 @@ figgy-pudding@^3.5.1:
   resolved "https://registry.npmjs.org/figgy-pudding/-/figgy-pudding-3.5.1.tgz"
   integrity sha512-vNKxJHTEKNThjfrdJwHc7brvM6eVevuO5nTj6ez8ZQ1qbXTvGthucRF7S4vf2cr71QVnT70V34v0S1DyQsti0w==
 
-figures@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.npmjs.org/figures/-/figures-1.7.0.tgz"
-  integrity sha1-y+Hjr/zxzUS4DK3+0o3Hk6lwHS4=
-  dependencies:
-    escape-string-regexp "^1.0.5"
-    object-assign "^4.1.0"
-
 figures@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/figures/-/figures-3.1.0.tgz"
   integrity sha512-ravh8VRXqHuMvZt/d8GblBeqDMkdJMBdv/2KntFH+ra5MXkO7nxNKpzQ3n6QD/2da1kH0aWmNISdvhM7gl2gVg==
+  dependencies:
+    escape-string-regexp "^1.0.5"
+
+figures@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
+  integrity sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==
   dependencies:
     escape-string-regexp "^1.0.5"
 
@@ -7686,11 +7672,6 @@ once@^1.3.0, once@^1.3.1, once@^1.4.0:
   dependencies:
     wrappy "1"
 
-onetime@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/onetime/-/onetime-1.1.0.tgz"
-  integrity sha1-ofeDj4MUxRbwXs78vEzP4EtO14k=
-
 onetime@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/onetime/-/onetime-5.1.0.tgz"
@@ -9638,14 +9619,6 @@ resolve@^1.10.0, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.14.2, resolve@^1.3
   integrity sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==
   dependencies:
     path-parse "^1.0.6"
-
-restore-cursor@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/restore-cursor/-/restore-cursor-1.0.1.tgz"
-  integrity sha1-NGYfRohjJ/7SmRR5FSJS35LapUE=
-  dependencies:
-    exit-hook "^1.0.0"
-    onetime "^1.0.0"
 
 restore-cursor@^3.1.0:
   version "3.1.0"
