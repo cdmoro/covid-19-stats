@@ -22,7 +22,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-i18next": "^11.3.4",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "svg-pan-zoom": "ariutta/svg-pan-zoom",
     "typescript": "~3.7.2",
     "world-map-country-shapes": "^1.0.0"
